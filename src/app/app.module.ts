@@ -13,6 +13,7 @@ import {CreateprofilePage} from '../pages/createprofile/createprofile';
 import { ProvidersUserProvider } from '../providers/providers-user/providers-user';
 
 import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
+import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 
 
 @NgModule({
@@ -23,8 +24,8 @@ import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
     LoginmodalPage,
     LandhomePage,
     CreateprofilePage,
-    
-    ViewroomsPage
+    ViewroomsPage,
+    RoomdetailsPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
     LoginmodalPage,
     LandhomePage,
     CreateprofilePage,
-    ViewroomsPage
+    ViewroomsPage,
+    RoomdetailsPage
   ],
   providers: [
     StatusBar,
