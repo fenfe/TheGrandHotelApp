@@ -1,8 +1,12 @@
+import { ViewroomsPage } from './../viewrooms/viewrooms';
+
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
 import { HomePage } from '../home/home';
 import { LoginmodalPage } from '../loginmodal/loginmodal';
+
 
 /**
  * Generated class for the LandhomePage page.
@@ -30,5 +34,9 @@ export class LandhomePage {
       this.navCtrl.push(LoginmodalPage);
      
     });
+  }
+
+  goview(){
+    this.navCtrl.push(ViewroomsPage);
   }
 }

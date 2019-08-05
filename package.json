@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.802.0",
-    "@ionic/app-scripts": "3.2.2",
+    "@ionic/app-scripts": "^3.2.4",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project"

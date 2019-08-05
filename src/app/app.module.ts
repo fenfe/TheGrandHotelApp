@@ -12,6 +12,9 @@ import {LandhomePage} from '../pages/landhome/landhome';
 import {CreateprofilePage} from '../pages/createprofile/createprofile';
 import { ProvidersUserProvider } from '../providers/providers-user/providers-user';
 
+import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +22,9 @@ import { ProvidersUserProvider } from '../providers/providers-user/providers-use
     RegistermodalPage,
     LoginmodalPage,
     LandhomePage,
-    CreateprofilePage
+    CreateprofilePage,
+    
+    ViewroomsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,8 @@ import { ProvidersUserProvider } from '../providers/providers-user/providers-use
     RegistermodalPage,
     LoginmodalPage,
     LandhomePage,
-    CreateprofilePage
+    CreateprofilePage,
+    ViewroomsPage
   ],
   providers: [
     StatusBar,
