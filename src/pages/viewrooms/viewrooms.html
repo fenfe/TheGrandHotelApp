@@ -17,7 +17,8 @@
    
 </div>
 
-  <div class="image">
+  <div class="image"  *ngFor="let room of roomList">
+  <img src="{{room.image}}" alt="" class="src">
     <div class="stars">
         <ion-icon name="star" style="color: goldenrod"></ion-icon>
         <ion-icon name="star" style="color: goldenrod"></ion-icon>
@@ -25,8 +26,8 @@
         <ion-icon name="star" style="color: goldenrod"></ion-icon>
         <ion-icon name="star" style="color: goldenrod"></ion-icon>
     </div>
-     <p style="color: black; font-weight: bolder">ivory tower deluxe</p>
-    <p style="color: white">R 4000</p>
+     <p style="color: black; font-weight: bolder">{{room.name}}</p>
+    <p style="color: white">R {{room.price}}</p>
 </div>
   </div>
 </div>

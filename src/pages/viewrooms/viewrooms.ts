@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 /**
  * Generated class for the ViewroomsPage page.
  *
@@ -14,12 +15,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'viewrooms.html',
 })
 export class ViewroomsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewroomsPage');
-  }
+  db = firebase.firestore();
+  roomList = [];
+  r = {};
+  public eventListRef: firebase.firestore.CollectionReference;
+    constructor(public menuCtrl: MenuController,) {
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          this.eventListRef = firebase
+            .firestore()
+            .collection(`/Room`);
+        }
+      });
+    }
+    ngOnInit() {
+      this.db.collection('Room').get().then(res =>{
+       res.forEach(doc =>{
+         console.log( 'Room: ', doc.data());
+  this.roomList.push(doc.data());
+       })
+      }).catch(err => {
+        console.log('No data');
+        
+      })
+      }
 
 }
