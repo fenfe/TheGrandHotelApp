@@ -1,0 +1,228 @@
+page-landhome {
+    ion-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+          bottom: 0;
+        .container {
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+            position: relative;
+          
+
+            //outline border
+            .border {
+                border: 1px solid rgb(38, 10, 163);
+                width: 80%;
+                height: 80%;  
+                position: relative;
+                left:10%;
+                top: 10%;
+
+                //image on top
+                
+            }
+            .image {
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 80%;
+            height: 80%;  
+            position: relative;
+            left:0;
+            top: -80%;
+            z-index: 5;
+
+            //cool animation
+            .cb-slideshow,
+.cb-slideshow:after { 
+    // position: fixed;
+    width: 100%;
+    height: 100%;
+    /* top: 0px;
+    left: 0px;
+    z-index: 0;  */
+
+          // position: absolute;
+            left:0;
+           // top: -70%;
+            z-index: 5;
+
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(../../assets/imgs/kabo.jpg) repeat top left; 
+}
+
+//styling the list
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+//another style
+.cb-slideshow li div { border: 1pz solid red;
+    z-index: 1000;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+   // font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    //font-size: 10%;
+   // padding: 0;
+   // line-height: 200px; 
+}
+li {
+    list-style: none;
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../../assets/imgs/logo.png) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../../assets/imgs/kabo.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../../assets/imgs/logo.png);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../../assets/imgs/kabo.jpg);
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../../assets/imgs/logo.png);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../../assets/imgs/kabo.jpg);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-transform: translateY(200px);
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: translateY(0px);
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1);
+	}
+	19% { opacity: 0 }
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(10);
+	}
+	100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 7vw }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size:9vw }
+}
+
+            //buttons
+            .btns {
+                
+                border: 1px solid red;
+                width: 45%;
+                height: 50%;
+                position: absolute;
+                top: 20%;
+                left: 78%;
+
+                //button
+                .btn {
+                    display: flex;
+                    flex-direction: row;
+                    border: 1px solid rgb(15, 14, 14);
+                    width: 100%;
+                    height: 13%; 
+
+                    .text {
+                       background: red;
+                        width: 70%;
+                        height: 100%; 
+
+                        p {margin: 0;
+                            border: 1px solid white;
+                            text-align: center;
+                            font-size: 5vw;
+                        }
+
+                    }
+                   .icon {
+                        background: rgb(17, 15, 15);
+                        width: 30%;
+                         height: 100%; 
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+
+                         ion-icon {
+                          
+                            font-size: 7vw;
+                               margin: 0;
+                                padding: 0;
+                         }
+
+
+                    }
+                }
+            }
+            }
+        }
+    }
+}

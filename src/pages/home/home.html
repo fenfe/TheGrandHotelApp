@@ -1,14 +1,77 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content>
+ <div class="container">
+  
+  <ion-slides #slides>
+    <ion-slide style="background-image: url(../../assets/imgs/kabo.jpg);background-size: cover;background-position: center;background-repeat: no-repeat; z-index: 0;">
+   <div class="text">
+     <h3>hello world</h3>
+   </div>
+
+     <div class="btn">
+         <button id="next" (click)="next()"  ion-button clear  large style="color: #fff; width: 45%; letter-spacing: 3px; background:rgba(8, 8, 8, 0.144)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Next</button>
+         <button id="skip" (click)="registerModal()" ion-button clear large style="color: #fff; width: 45%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Skip </button>
+        </div>
+        
+   </ion-slide> 
+
+   <!-- slide2 -->
+   <ion-slide style="background-image: url(../../assets/imgs/kabo.jpg);background-size: cover;background-position: center;background-repeat: no-repeat; z-index: 0;">
+      
+    <div class="text2">
+        <h3>hello world</h3>
+      </div>
+
+    <div class="btn2">
+     <button id="next" (click)="next()"  ion-button clear  large style="color: #fff; width: 80%; letter-spacing: 3px; background:rgb(14, 13, 13)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Next</button>
+     <button id="skip" (click)="registerModal()" ion-button clear  large style="color: #fff; width: 80%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Skip </button>
+    </div>
+   
+</ion-slide> 
+
+<!-- slide3 -->
+<ion-slide style="background:blue">
+      
+  <div class="text3">
+      <h3>hello world</h3>
+    </div>
+
+    <div class="image" style="background-image: url(../../assets/imgs/kabo.jpg);background-size: cover;background-position: center;background-repeat: no-repeat; z-index: 0;">
+     <!--  <img src="../../assets/imgs/kabo.jpg" width="100%" height="100%"> -->
+    </div>
+
+  <div class="btn3">
+   
+   <button id="skip" (click)="registerModal()" ion-button clear large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Get Started</button>
+  </div>
+ 
+</ion-slide> 
+
+  </ion-slides>
+ </div> 
+<!-- 
+<ul class="cb-slideshow">
+  
+<li>
+  <span>image 1</span>
+  <div><h3>relaxation</h3></div>
+</li>
+
+
+<li>
+    <span>image 1</span>
+    <div><h3>relaxation</h3></div>
+  </li>
+
+
+<li>
+    <span>image 1</span>
+    <div><h3>relaxation</h3></div>
+  </li>
+
+</ul>
+
+
+ -->
 </ion-content>

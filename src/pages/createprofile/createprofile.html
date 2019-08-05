@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>createprofile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="head">
+          <h1>Welcome Back</h1>
+          <p>Login with your account</p>
+        </div>
+      
+        
+        <div class="inputs">
+            <!--      <ion-list > -->
+             
+                   <ion-item style="background: transparent">
+                     <ion-label floating style="color: rgb(77, 36, 36)" ><ion-icon name="person" style="color: black"></ion-icon>  Fullname</ion-label>
+                     <ion-input type="text" style="color: rgb(107, 41, 41)"></ion-input>
+                   </ion-item>
+                 
+                   <ion-item style="background: transparent">
+                     <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="call" style="color: black"></ion-icon>  Contacts</ion-label>
+                     <ion-input  type="number" style="color: rgb(10, 10, 10)"></ion-input>
+                   </ion-item>
+                   <br>
+                   <ion-item style="background: transparent">
+                      <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="calendar" style="color: black"></ion-icon>  Date of birth</ion-label>
+                      <ion-input  type="date" style="color: rgb(10, 10, 10)"></ion-input>
+                    </ion-item>
+                    <br>
+                    
+                    <ion-item>
+                   
+                      <ion-label><ion-icon name="male" style="color: rgb(16, 7, 97)"></ion-icon> Male<ion-toggle  checked="false" secondary></ion-toggle></ion-label>
+                      <ion-label><ion-icon name="female" style="color: rgb(119, 8, 95)"></ion-icon> Female<ion-toggle style="color: rgb(119, 8, 95)" checked="false"></ion-toggle></ion-label>
+
+                    </ion-item>
+
+                    <br>
+                    <ion-item style="background: transparent">
+                       <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="images" style="color: black"></ion-icon> Upload image</ion-label>
+                       <ion-input  type="text" style="color: rgb(10, 10, 10)"></ion-input>
+                     </ion-item>
+                   <button id="skip" (click)="gohome()" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Profile </button>
+      
+              </div> 
+      
+      </div>
+</ion-content>

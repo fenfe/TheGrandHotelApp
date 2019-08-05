@@ -1,0 +1,44 @@
+<!--
+  Generated template for the RegistermodalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>registermodal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div class="container">
+  <div class="head">
+    <h1>Create an Account</h1>
+    <p>and have the luxury of convenience to book with us anytime, anywhere </p>
+  </div>
+
+  
+  <div class="inputs">
+      <!--      <ion-list > -->
+       
+             <ion-item style="background: transparent">
+               <ion-label floating style="color: rgb(77, 36, 36)" ><ion-icon name="mail" style="color: black"></ion-icon>  Email</ion-label>
+               <ion-input type="email" style="color: rgb(107, 41, 41)"></ion-input>
+             </ion-item>
+           
+             <ion-item style="background: transparent">
+               <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="lock" style="color: black"></ion-icon>  Password</ion-label>
+               <ion-input  type="password" style="color: rgb(10, 10, 10)"></ion-input>
+             </ion-item>
+             <br>
+             <button id="skip" (click)="gohome()" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Account </button>
+
+        </div>   
+
+        <!-- foot -->
+        <div class="foot">
+          <p>Already have an account? <span><h6 (click)="loginModal()">Login</h6></span></p>
+        </div>
+
+</div>
+</ion-content>
