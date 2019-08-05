@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+
 import {RegistermodalPage} from '../registermodal/registermodal';
 import {LandhomePage} from '../landhome/landhome';
+import { EmailValidator } from '../../validators/email';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { IonicPage, NavController, NavParams,LoadingController,
+  Loading,
+  AlertController ,ModalController} from 'ionic-angular';
+import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
 /**
  * Generated class for the LoginmodalPage page.
  *
@@ -15,24 +21,46 @@ import {LandhomePage} from '../landhome/landhome';
   templateUrl: 'loginmodal.html',
 })
 export class LoginmodalPage {
-
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController, public navParams: NavParams) {
+ loginForm: FormGroup;
+  loading: Loading;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authData: ProvidersUserProvider,
+    public formBuilder: FormBuilder, public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController, public modalCtrl : ModalController) {
+      this.loginForm = formBuilder.group({
+        email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
+        password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
+      });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginmodalPage');
+  loginUser(){
+    if (!this.loginForm.valid){
+      console.log(this.loginForm.value);
+    } else {
+      this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password)
+      .then( authData => {
+        this.navCtrl.setRoot(LandhomePage);
+      }, error => {
+        this.loading.dismiss().then( () => {
+          let alert = this.alertCtrl.create({
+            message: error.message,
+            buttons: [
+              {
+                text: "Ok",
+                role: 'cancel'
+              }
+            ]
+          });
+          alert.present();
+        });
+      });
+
+      this.loading = this.loadingCtrl.create({
+        dismissOnPageChange: true,
+      });
+      this.loading.present();
+    }
   }
 
-//gohome
-gohome(){
-  this.navCtrl.push(LandhomePage);
-}
-
-//login modal
-loginModal() {
-  let loginModal = this.modalCtrl.create(LoginmodalPage);
-  loginModal.present();
-}
 
 //create register modal
 registerModal() {

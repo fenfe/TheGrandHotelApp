@@ -10,6 +10,7 @@ import {RegistermodalPage} from '../pages/registermodal/registermodal';
 import {LoginmodalPage} from '../pages/loginmodal/loginmodal';
 import {LandhomePage} from '../pages/landhome/landhome';
 import {CreateprofilePage} from '../pages/createprofile/createprofile';
+import { ProvidersUserProvider } from '../providers/providers-user/providers-user';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {CreateprofilePage} from '../pages/createprofile/createprofile';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProvidersUserProvider
   ]
 })
 export class AppModule {}
