@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
+import { RoomdetailsPage } from '../roomdetails/roomdetails';
 /**
  * Generated class for the ViewroomsPage page.
  *
@@ -19,7 +20,7 @@ export class ViewroomsPage {
   roomList = [];
   r = {};
   public eventListRef: firebase.firestore.CollectionReference;
-    constructor(public menuCtrl: MenuController,) {
+    constructor(public menuCtrl: MenuController,public navCtrl: NavController, public navParams: NavParams,) {
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
           this.eventListRef = firebase
@@ -38,6 +39,9 @@ export class ViewroomsPage {
         console.log('No data');
         
       })
+      }
+      viewRoom(value){
+        this.navCtrl.push(RoomdetailsPage, value)
       }
 
 }

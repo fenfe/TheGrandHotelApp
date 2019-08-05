@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import firebase from 'firebase';
 
 /**
  * Generated class for the RoomdetailsPage page.
@@ -14,8 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'roomdetails.html',
 })
 export class RoomdetailsPage {
-
+  db = firebase.firestore();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+
+    console.log('View Hotel Params received: ', this.navParams);
+
+
   }
 
   ionViewDidLoad() {

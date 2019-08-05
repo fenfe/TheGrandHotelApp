@@ -25,7 +25,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     LandhomePage,
     CreateprofilePage,
     ViewroomsPage,
-    RoomdetailsPage
+    RoomdetailsPage,
+    
   ],
   imports: [
     BrowserModule,
