@@ -1,0 +1,99 @@
+<!--
+  Generated template for the BookmodalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>bookmodal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="head">
+      <H1>Please complete the form</H1>
+    </div>
+
+ <!-- inputs -->
+ <div class="inputs">
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-In date</ion-label>
+    <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+      ></ion-datetime>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-out date</ion-label>
+    <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+      ></ion-datetime>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500"> Adults</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
+      <ion-option>1</ion-option>
+      <ion-option>2</ion-option>
+      <ion-option>3</ion-option>
+      <ion-option>4</ion-option>
+      <ion-option>5</ion-option>
+      <ion-option>6</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Children</ion-label>
+    <ion-select style="color: goldenrod; border-bottom: 1px solid black">
+        <ion-option>0</ion-option>
+      <ion-option>1</ion-option>
+      <ion-option>2</ion-option>
+      <ion-option>3</ion-option>
+      <ion-option>4</ion-option>
+      <ion-option>5</ion-option>
+      <ion-option>6</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Number of Rooms</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
+      <ion-option>1</ion-option>
+      <ion-option>2</ion-option>
+      <ion-option>3</ion-option>
+      <ion-option>4</ion-option>
+      <ion-option>5</ion-option>
+      <ion-option>6</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Meal type</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
+      <ion-option value="460">Full Board R460.00</ion-option>
+      <ion-option value="300">Half board R300.00</ion-option>
+      <ion-option value="0">No meals thank you!</ion-option>
+    </ion-select>
+  </ion-item>
+</div>
+
+<div class="btn">
+  <button id="next" (click)="''" ion-button clear  large
+    style="color: #fff; width: 48%; letter-spacing: 3px; background:rgb(53, 52, 52)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Cancel</button>
+  <button id="skip" (click)="gopayform()" ion-button clear large
+    style="color: #fff; width: 48%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Continue
+  </button>
+</div> 
+
+</div>
+
+</ion-content>

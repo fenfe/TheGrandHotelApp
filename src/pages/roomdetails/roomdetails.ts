@@ -1,3 +1,4 @@
+import { BookmodalPage } from './../bookmodal/bookmodal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
@@ -27,5 +28,7 @@ export class RoomdetailsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RoomdetailsPage');
   }
-
+gopay(){
+  this.navCtrl.push(BookmodalPage)
+}
 }

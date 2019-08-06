@@ -1,3 +1,5 @@
+import { PaymentmodalPage } from './../pages/paymentmodal/paymentmodal';
+import { BookmodalPage } from './../pages/bookmodal/bookmodal';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -26,7 +28,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     CreateprofilePage,
     ViewroomsPage,
     RoomdetailsPage,
-    
+    BookmodalPage,
+    PaymentmodalPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     LandhomePage,
     CreateprofilePage,
     ViewroomsPage,
-    RoomdetailsPage
+    RoomdetailsPage,
+    BookmodalPage,
+    PaymentmodalPage
   ],
   providers: [
     StatusBar,
