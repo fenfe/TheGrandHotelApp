@@ -15,18 +15,24 @@ ion-content {
     .btn {
         border: 1px solid red;
         width: 80%;
-        height: 15%;
+        height: 10%;
         position: relative;
         left:10%;
-        
+       top: 9%;
+        display: flex;
+        button {
+           /*  position: relative;
+            left:0%;
+            top: 55%; */
+        }
     }
     .head {
         border: 1px solid blue;
         width: 80%;
-        height: 15%;
+        height: 10%;
         position: relative;
         left:10%;
-        h1 {
+        h4 {
             text-align: center;
              }
     }
