@@ -3,11 +3,7 @@
     <name>grandhoteApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
-<<<<<<< HEAD
-    <content original-src="index.html" src="http://192.168.1.69:8100" />
-=======
-    <content original-src="index.html" src="http://192.168.1.18:8101" />
->>>>>>> a81ee1cf9f7be441c6dd5e6946121a5754b689dd
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -103,9 +99,4 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-<<<<<<< HEAD
-    <allow-navigation href="http://192.168.1.69:8100" sessionid="f8723e92" />
-=======
-    <allow-navigation href="http://192.168.1.18:8101" sessionid="08c1c5ff" />
->>>>>>> a81ee1cf9f7be441c6dd5e6946121a5754b689dd
 </widget>
