@@ -13,22 +13,17 @@
 <ion-content>
 <div class="container">
   <div class="image">
-    <img src="img/nin-live.png" alt="" width="100%" height=100%>
+    <img  *ngIf="room.image" src="{{room.image}}" alt="" width="100%" height=100%>
   </div>
   <div class="highlights">
     
-      <h5 *ngIf="room.name">Booking a {{room.name}}</h5>
+      <h5 *ngIf="room.name"> {{room.name}}</h5>
       <div class="list">
         <ul class="two">
-          <li>46" television</li>
-          <li>Spa-inspired bathroom </li>
-           <li>Serta pillow top bed</li>
+          <li *ngFor="let f of room.highlights">{{f}}</li>
+          
         </ul>
-        <ul class="two">
-            <li>Minibar</li>
-            <li>Walk-in shower</li>
-             <li>In-room Wi-Fi</li>
-          </ul>
+      
   </div>
 
 
@@ -36,9 +31,8 @@
   
       <h5>Amenities</h5>
       <ul>
-        <li>Feather and down-free bedding</li>
-        <li>Hair dryer</li>
-        <li>Iron and ioning board </li>
+        <li  *ngFor="let f of room.amenities" >{{f}}</li>
+      
       </ul>
     </div> 
   </div>
