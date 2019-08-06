@@ -6,92 +6,137 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>landhome</ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="fab-button"></ion-icon>
+    </button>
+
+    <ion-title>
+      Page Title
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+>
 </ion-header>
 
 <ion-content>
-<div class="container">
-  <div class="border">
+  <div class="container">
+    <div class="border">
 
-  </div>
+    </div>
 
-  <div class="image">
-    <!-- slideshow  -->
-    <ul class="cb-slideshow">
+    <div class="image">
+      <!-- slideshow  -->
+      <ul class="cb-slideshow">
         <li>
           <span>Image 01</span>
-          <div><h3>re·lax·a·tion</h3></div>
-            </li>
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
 
-            <li>
-                <span>Image 01</span>
-                <div><h3>re·lax·a·tion</h3></div>
-                  </li>
-
-                  <li>
-                      <span>Image 01</span>
-                      <div><h3>re·lax·a·tion</h3></div>
-                        </li>
-
-                        <li>
-                            <span>Image 01</span>
-                            <div><h3>re·lax·a·tion</h3></div>
-                              </li>
-
-                              <li>
-                                  <span>Image 01</span>
-                                  <div><h3>re·lax·a·tion</h3></div>
-                                    </li>
-
-                                     <li>
+        <li>
           <span>Image 01</span>
-          <div><h3>re·lax·a·tion</h3></div>
-            </li>
-          
-        
-       
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
+
+        <li>
+          <span>Image 01</span>
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
+
+        <li>
+          <span>Image 01</span>
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
+
+        <li>
+          <span>Image 01</span>
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
+
+        <li>
+          <span>Image 01</span>
+          <div>
+            <h3>re·lax·a·tion</h3>
+          </div>
+        </li>
+
+
+
       </ul>
 
       <!-- buttons -->
-    <div class="btns">
-      <div class="btn" (click)="goview()">
-        <div class="text"><p>Rooms</p>  </div>
-        <div class="icon"> <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon></div>
-      </div>
-<br>
-      <div class="btn">
-          <div class="text"><p>Resturant</p></div>
-          <div class="icon"> <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon></div>
+      <div class="btns">
+        <div class="btn" (click)="goview()">
+          <div class="text">
+            <p>Rooms</p>
+          </div>
+          <div class="icon">
+            <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon>
+          </div>
+        </div>
+        <br>
+        <div class="btn">
+          <div class="text">
+            <p>Resturant</p>
+          </div>
+          <div class="icon">
+            <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon>
+          </div>
         </div>
 
         <br>
-      <div class="btn">
-          <div class="text"><p>Casino</p></div>
-          <div class="icon"> <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon></div>
+        <div class="btn">
+          <div class="text">
+            <p>Casino</p>
+          </div>
+          <div class="icon">
+            <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon>
+          </div>
         </div>
 
         <br>
-      <div class="btn">
-          <div class="text"><p>Spaaaa</p></div>
-          <div class="icon"> <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon></div>
+        <div class="btn">
+          <div class="text">
+            <p>Spaaaa</p>
+          </div>
+          <div class="icon">
+            <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon>
+          </div>
         </div>
 
         <br>
-      <div class="btn" (click)="logout()">
-          <div class="text"><p>Explore</p></div>
-          <div class="icon"> <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon></div>
+        <div class="btn" (click)="logout()">
+          <div class="text">
+            <p>Explore</p>
+          </div>
+          <div class="icon">
+            <ion-icon name="calendar" style="color: rgb(255, 249, 249)"></ion-icon>
+          </div>
         </div>
 
-    <!-- <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width: 100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p><ion-icon name="calendar" end style="color: black"></ion-icon></button>
+        <!-- <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width: 100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p><ion-icon name="calendar" end style="color: black"></ion-icon></button>
     <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width: 100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p></button>
     <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width:100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p></button>
     <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width: 100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p></button>
     <button ion-button clear style="color: #fff; letter-spacing: 2px; background:rgba(66, 65, 65, 0.541)  ; font-size: 80%; width: 100%; font-family:Georgia, 'Times New Roman', Times, serif;" ion-button color="secondary"><p>Stay</p></button>
  -->
-  </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
 </ion-content>
