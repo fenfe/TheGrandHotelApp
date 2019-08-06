@@ -17,11 +17,12 @@ import firebase from 'firebase';
 })
 export class RoomdetailsPage {
   db = firebase.firestore();
+  room = {} as Room;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
 
     console.log('View Hotel Params received: ', this.navParams);
-
+    this.room = this.navParams.data;
 
   }
 
@@ -31,4 +32,13 @@ export class RoomdetailsPage {
 gopay(){
   this.navCtrl.push(BookmodalPage)
 }
+}
+export interface Room {
+  name: string;
+  type: string;
+  image: string;
+  features : [any],
+  price: number,
+  highlights: [any],
+  amenities: [any],
 }
