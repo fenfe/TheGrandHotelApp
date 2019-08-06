@@ -21,9 +21,9 @@ export class RoomdetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
 
-    console.log('View Hotel Params received: ', this.navParams);
+    console.log('data ', this.navParams);
     this.room = this.navParams.data;
-    console.log('View Hotel Params received: ',   this.room );
+    console.log('room dtaa ',   this.room );
   }
 
   ionViewDidLoad() {
@@ -37,8 +37,8 @@ export interface Room {
   name: string;
   type: string;
   image: string;
-  features : [any],
+  features : [],
   price: number,
-  highlights: [any],
-  amenities: [any],
+  highlights: [],
+  amenities: [],
 }
