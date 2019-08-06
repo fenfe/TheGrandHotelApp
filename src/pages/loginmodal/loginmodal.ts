@@ -55,7 +55,8 @@ export class LoginmodalPage {
       });
 
       this.loading = this.loadingCtrl.create({
-        dismissOnPageChange: true,
+        duration: 1000
+       // dismissOnPageChange: true,
       });
       this.loading.present();
     }
