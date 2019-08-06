@@ -4,14 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
-    <ion-title>loginmodal</ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content>
-    <div class="container">
+    <div class="container" style="background-image: url(../../assets/imgs/background.jpeg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;">
         <div class="head">
           <h1>Welcome Back</h1>
           <p>Login with your account</p>
@@ -22,8 +18,8 @@
             <!--      <ion-list > -->
              
                    <ion-item style="background: transparent">
-                     <ion-label floating style="color: rgb(77, 36, 36)" ><ion-icon name="mail" style="color: black"></ion-icon>  Email</ion-label>
-                     <ion-input type="email" style="color: rgb(107, 41, 41)" formControlName="email" type="email"  [class.invalid]="!loginForm.controls['email'].valid &&
+                     <ion-label  floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="mail" style="color: black"></ion-icon>  Email</ion-label>
+                     <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" type="email"  [class.invalid]="!loginForm.controls['email'].valid &&
                      loginForm.controls['email'].touched"></ion-input>
                    </ion-item>
                    <ion-item class="error-message" *ngIf="!loginForm.controls['email'].valid &&
@@ -32,8 +28,8 @@
                 </ion-item>
             
                    <ion-item style="background: transparent">
-                     <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="lock" style="color: black"></ion-icon>  Password</ion-label>
-                     <ion-input  type="password" style="color: rgb(10, 10, 10)" formControlName="password" type="password" 
+                     <ion-label floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="lock" style="color: black"></ion-icon>  Password</ion-label>
+                     <ion-input  type="password" sstyle="color: white;font-weight: 400; letter-spacing: 1px" formControlName="password" type="password" 
                      [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched"></ion-input>
                    </ion-item>
                    <ion-item class="error-message" *ngIf="!loginForm.controls['password'].valid

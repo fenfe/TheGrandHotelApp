@@ -4,14 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
-    <ion-title>registermodal</ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content>
-<div class="container">
+<div class="container" style="background-image: url(../../assets/imgs/background.jpeg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;">
   <div class="head">
     <h1>Create an Account</h1>
     <p>and have the luxury of convenience to book with us anytime, anywhere </p>
@@ -22,16 +18,16 @@
       <!--      <ion-list > -->
         <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
           <ion-item style="background: transparent">
-            <ion-label floating style="color: rgb(77, 36, 36)" ><ion-icon name="mail" style="color: black"></ion-icon>  Email</ion-label>
-            <ion-input type="email" style="color: rgb(107, 41, 41)" formControlName="email" 
+            <ion-label floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
+            <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" 
             [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
           </ion-item>
         <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
           <p style="color: red">Please enter a valid email.</p>
         </ion-item>
           <ion-item style="background: transparent">
-            <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="lock" style="color: black"></ion-icon>  Password</ion-label>
-            <ion-input  type="password" style="color: rgb(10, 10, 10)" formControlName="password"
+            <ion-label floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="lock" style="color:white"></ion-icon>  Password</ion-label>
+            <ion-input  type="password" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="password"
             [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
           </ion-item>
           <ion-item class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">

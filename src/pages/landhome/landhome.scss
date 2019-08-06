@@ -13,7 +13,7 @@ page-landhome {
 
             //outline border
             .border {
-                border: 1px solid rgb(38, 10, 163);
+                border: 2px solid rgba(167, 122, 37, 1);;
                 width: 80%;
                 height: 80%;  
                 position: relative;
@@ -93,26 +93,30 @@ li {
 }
 
 .cb-slideshow li:nth-child(1) span { 
-    background-image: url(../../assets/imgs/logo.png) 
+    background-image: url(../../assets/imgs/bsuite2.jpg) 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url(../../assets/imgs/kabo.jpg);
+    background-image: url(../../assets/imgs/bathroom4.jpg);
     animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span { 
-    background-image: url(../../assets/imgs/logo.png);
+    background-image: url(../../assets/imgs/pool2.jpg);
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url(../../assets/imgs/kabo.jpg);
+    background-image: url(../../assets/imgs/breakfast2.jpg);
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url(../../assets/imgs/logo.png);
+    background-image: url(../../assets/imgs/hotel-front3.jpg);
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
-    background-image: url(../../assets/imgs/kabo.jpg);
+    background-image: url(../../assets/imgs/pool4.jpg);
+    animation-delay: 30s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../../assets/imgs/kids1.jpg);
     animation-delay: 30s; 
 }
 
@@ -174,7 +178,7 @@ li {
             //buttons
             .btns {
                 
-                border: 1px solid red;
+             //   border: 1px solid red;
                 width: 45%;
                 height: 50%;
                 position: absolute;
@@ -185,24 +189,26 @@ li {
                 .btn {
                     display: flex;
                     flex-direction: row;
-                    border: 1px solid rgb(15, 14, 14);
+                   // border: 1px solid rgb(15, 14, 14);
                     width: 100%;
                     height: 13%; 
+                    border-radius: 6px;
 
                     .text {
-                       background: red;
+                       background:rgba(167, 122, 37, 1);
                         width: 70%;
                         height: 100%; 
-
+                      //  border-radius: 6px;
                         p {margin: 0;
-                            border: 1px solid white;
+                          //  border: 1px solid white;
                             text-align: center;
                             font-size: 5vw;
+                            color: white;
                         }
 
                     }
                    .icon {
-                        background: rgb(17, 15, 15);
+                        background: rgba(167, 122, 37, 1);
                         width: 30%;
                          height: 100%; 
                     margin: 0;
