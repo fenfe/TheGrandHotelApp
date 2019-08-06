@@ -21,21 +21,21 @@
   <ion-item>
     <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-In date</ion-label>
     <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
-      ></ion-datetime>
+    [(ngModel)]="Booking.checkin" ngDefaultControl></ion-datetime>
   </ion-item>
 
 
   <ion-item>
     <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-out date</ion-label>
     <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
-      ></ion-datetime>
+    [(ngModel)]="Booking.checkout" ngDefaultControl></ion-datetime>
   </ion-item>
 
 
 
-  <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500"> Adults</ion-label>
-    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
+  <ion-item >
+    <ion-label floating style="color: black; font-size: 100%; font-weight: 500"  > Adults</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid black"  [(ngModel)]="Booking.adults" ngDefaultControl>
       <ion-option>1</ion-option>
       <ion-option>2</ion-option>
       <ion-option>3</ion-option>
@@ -89,8 +89,8 @@
 <div class="btn">
   <button id="next" (click)="''" ion-button clear  large
     style="color: #fff; width: 48%; letter-spacing: 3px; background:rgb(53, 52, 52)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Cancel</button>
-  <button id="skip" (click)="gopayform()" ion-button clear large
-    style="color: #fff; width: 48%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Continue
+  <button id="skip" (click)="createBooking()" ion-button clear large
+    style="color: #fff; width: 48%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Continue
   </button>
 </div> 
 
