@@ -13,7 +13,7 @@ import {LoginmodalPage} from '../pages/loginmodal/loginmodal';
 import {LandhomePage} from '../pages/landhome/landhome';
 import {CreateprofilePage} from '../pages/createprofile/createprofile';
 import { ProvidersUserProvider } from '../providers/providers-user/providers-user';
-
+import { Camera } from "@ionic-native/camera";
 import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
 import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 
@@ -52,7 +52,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProvidersUserProvider
+    ProvidersUserProvider,
+    Camera
   ]
 })
 export class AppModule {}

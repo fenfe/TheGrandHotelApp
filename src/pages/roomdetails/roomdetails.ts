@@ -18,6 +18,8 @@ import firebase from 'firebase';
 export class RoomdetailsPage {
   db = firebase.firestore();
   room = {} as Room;
+  
+  userData;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
 
@@ -30,15 +32,16 @@ export class RoomdetailsPage {
     console.log('ionViewDidLoad RoomdetailsPage');
   }
 gopay(){
-  this.navCtrl.push(BookmodalPage)
+  this.navCtrl.push(BookmodalPage,this.navParams.data)
 }
+
 }
 export interface Room {
   name: string;
   type: string;
   image: string;
-  features : [],
+  features : [any],
   price: number,
-  highlights: [],
-  amenities: [],
+  highlights: [any],
+  amenities: [any],
 }
