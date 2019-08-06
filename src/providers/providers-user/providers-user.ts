@@ -20,7 +20,23 @@ export class ProvidersUserProvider {
     console.log('Hello UserProvider Provider');
   }
   loginUser(email: string, password: string): Promise<any> {
-    return firebase.auth().signInWithEmailAndPassword(email, password);
+    return firebase.auth().signInWithEmailAndPassword(email, password).then(res => {
+      if (res.user.uid){
+        this.db.collection('userProfile').where('uid', '==', res.user.uid).get().then(snapshot => {
+          snapshot.forEach(doc => {
+            console.log('Makhe sibone',doc.data());
+
+          })
+         
+        })
+      
+      }
+    }, err => {
+      console.log("Error: ", err);
+      //this.error = err.message;
+      console.log('Owner user signin error: ', err);
+     
+    })
   }
   signupUser(email: string, password: string): Promise<any> {
     return firebase

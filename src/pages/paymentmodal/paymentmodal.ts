@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import * as firebase from 'firebase';
 /**
  * Generated class for the PaymentmodalPage page.
  *
@@ -14,12 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'paymentmodal.html',
 })
 export class PaymentmodalPage {
-
+  db = firebase.firestore();
+  payment = {
+    
+    name: '',
+    surname: '',
+    cardnumber: null,
+    cvv: null,
+    expiration: null
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PaymentmodalPage');
+    console.log(this.navParams);
   }
+
+  
 
 }

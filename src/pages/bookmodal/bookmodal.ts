@@ -30,8 +30,8 @@ export class BookmodalPage {
     price: 0, 
     days: 0, 
     roomname: null,
-  email: null
-
+  email: null,
+dateBooked : null
   };
 
   userData;
@@ -42,9 +42,9 @@ export class BookmodalPage {
   ionViewDidLoad() {
     this.room = this.navParams.data;
     this.Booking.roomname = this.room.name;
-  this.Booking.uid = this.userProvider.getUser().uid;
+  this.Booking.uid = this.userProvider.getUser();
     //console.log(this.navParams);
-    console.log('User id', this.room);
+    console.log('User id',this.userProvider.getUser());
     this.getProfile()
   }
 gopayform(){
@@ -88,8 +88,9 @@ createBooking() {
             this.Booking.price = this.room.price * this.Booking.days * parseInt(this.Booking.adults); // 3
             console.log( 'tHE BOOKING INFO: ' ,this.Booking);
            
+            this.Booking.dateBooked = Date(); 
 
-              this.db.collection('Bookings').doc(this.Booking.roomname + this.userProvider.getUser().uid).set(this.Booking).then(res => {
+              this.db.collection('Bookings').doc(this.Booking.roomname + this.userProvider.getUser()).set(this.Booking).then(res => {
                 this.toastCtrl.create({
                   message: 'Success',
                   duration: 3000
@@ -115,7 +116,7 @@ getProfile() {
 
   let users = this.db.collection('userProfile');
   
-  let query = users.where("uid", "==", this.userProvider.getUser().uid);
+  let query = users.where("uid", "==", this.userProvider.getUser());
   query.get().then(querySnapshot => {
    
     if (querySnapshot.empty !== true) {
