@@ -23,7 +23,7 @@ export class RoomdetailsPage {
 
     console.log('View Hotel Params received: ', this.navParams);
     this.room = this.navParams.data;
-
+    console.log('View Hotel Params received: ',   this.room );
   }
 
   ionViewDidLoad() {
