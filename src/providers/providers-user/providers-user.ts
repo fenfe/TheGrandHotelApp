@@ -46,7 +46,7 @@ export class ProvidersUserProvider {
         firebase
           .firestore()
           .doc(`/userProfile/${newUserCredential.user.uid}`)
-          .set({ email });
+          .set({ email  });
       })
       .catch(error => {
         console.error(error);
