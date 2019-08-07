@@ -1,7 +1,7 @@
 page-viewrooms {
 ion-content {
     .container {
-        border: 1px solid red;
+    
         width: 100%;
         height: 100%;
         display: flex;
@@ -12,7 +12,7 @@ ion-content {
             width: 50%;
             height: 50%;
                 .border {
-                //
+              //  border: 1px solid rgba(167, 122, 37, 1);
                 width: 75%;
                 height: 55%;  
                  position: relative;
@@ -26,19 +26,19 @@ ion-content {
             //image
             .image {
                 flex-wrap: wrap;
-               // background: green;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-               width: 77%;
+            //   background: green;
+                width: 77%;
                height: 66%;  
                position: relative;
                left:15%;
                top: -45%;
                z-index: -4;
-
+                border: 2px solid  rgba(167, 122, 37, 1);
+                
                .stars {
                    display: flex;
                    flex-direction: column;
-                 //  border: 1px solid goldenrod;
+                  // border: 1px solid goldenrod;
                    width: 15%;
                    height: 56%;
                    position: relative;
@@ -47,13 +47,14 @@ ion-content {
                    z-index: -4;
                }
                p {
-                 //  border: 1px solid red;
-                color: white;
+            //  border: 1px solid red;
+                color: rgb(228, 20, 20);
                 position: relative;
                 top: 23%;
                 padding-left: 5%;
                 margin: 0;
                 font-size: 100%;
+                overflow-y: auto;
             }
             //image on top
             }   
