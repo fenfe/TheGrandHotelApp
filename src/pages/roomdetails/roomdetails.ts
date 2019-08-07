@@ -35,6 +35,7 @@ gopay(){
   this.navCtrl.push(BookmodalPage,this.navParams.data)
 }
 
+
 }
 export interface Room {
   name: string;

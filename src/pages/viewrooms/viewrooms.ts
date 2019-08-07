@@ -44,4 +44,7 @@ export class ViewroomsPage {
         this.navCtrl.push(RoomdetailsPage, value)
       }
 
+      //modal
+      
+
 }

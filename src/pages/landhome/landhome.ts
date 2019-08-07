@@ -1,3 +1,4 @@
+import { UserinfoPage } from './../userinfo/userinfo';
 import { ViewroomsPage } from './../viewrooms/viewrooms';
 
 
@@ -43,5 +44,8 @@ user
 
   goview(){
     this.navCtrl.push(ViewroomsPage);
+  }
+  userInfo(){
+    this.navCtrl.push(UserinfoPage);
   }
 }

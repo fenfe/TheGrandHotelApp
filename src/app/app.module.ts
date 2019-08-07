@@ -16,6 +16,7 @@ import { ProvidersUserProvider } from '../providers/providers-user/providers-use
 import { Camera } from "@ionic-native/camera";
 import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
 import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
+import { UserinfoPage } from '../pages/userinfo/userinfo';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     ViewroomsPage,
     RoomdetailsPage,
     BookmodalPage,
-    PaymentmodalPage
+    PaymentmodalPage,
+    UserinfoPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     ViewroomsPage,
     RoomdetailsPage,
     BookmodalPage,
-    PaymentmodalPage
+    PaymentmodalPage,
+    UserinfoPage
   ],
   providers: [
     StatusBar,
