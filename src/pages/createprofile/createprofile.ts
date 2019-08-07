@@ -36,6 +36,7 @@ export class CreateprofilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider, private profileService : UserProfileProvider,public toast: ToastController, public loadingCtrl: LoadingController,  public loading: LoadingController, public camera: Camera) {
   this.uid = firebase.auth().currentUser.uid;
       this.profileService.setUser(this.uid)
+      this.authService.setUser(this.uid)
 
   }
 

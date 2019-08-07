@@ -28,6 +28,7 @@ user
   this.user = firebase.auth().currentUser.uid
   console.log(this.user)
   this.authService.setUser(this.user);
+  
 
   }
 
