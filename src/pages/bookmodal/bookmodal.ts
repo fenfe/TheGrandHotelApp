@@ -27,7 +27,8 @@ export class BookmodalPage {
     checkin: null, 
     checkout: null, 
     adults: null, 
-    price: 0, 
+    children: null,
+    Totalprice: 0, 
     days: 0, 
     roomname: null,
   email: null,
@@ -85,12 +86,12 @@ createBooking() {
             const diff = EndDate.valueOf() - StartDate.valueOf();
             this.Booking.days = Math.floor(diff / days); // 2
           
-            this.Booking.price = this.room.price * this.Booking.days * parseInt(this.Booking.adults); // 3
+            this.Booking.Totalprice = this.room.price * this.Booking.days * parseInt(this.Booking.adults); // 3
             console.log( 'tHE BOOKING INFO: ' ,this.Booking);
            
             this.Booking.dateBooked = Date(); 
 
-              this.db.collection('Bookings').doc(this.Booking.roomname + this.userProvider.getUser()).set(this.Booking).then(res => {
+              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser().uid ).set(this.Booking).then(res => {
                 this.toastCtrl.create({
                   message: 'Success',
                   duration: 3000

@@ -18,27 +18,27 @@
         <ion-item>
           <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Card holder</ion-label>
           <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="text"
-            ></ion-input>
+          [(ngModel)]="Payment.cardHolderName" ngDefaultControl></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Card number</ion-label>
             <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="number"
-              ></ion-input>
+            [(ngModel)]="Payment.cardnumber" ></ion-input>
           </ion-item>
       
       
         <ion-item>
           <ion-label floating style="color: black; font-size: 100%; font-weight: 500">CVV</ion-label>
           <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="number"
-            ></ion-input>
+          [(ngModel)]="Payment.cvv" ></ion-input>
         </ion-item>
 
       
         <ion-item>
             <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Expiry date</ion-label>
-            <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" 
-              ></ion-datetime>
+            <ion-input type="date" displayFormat="YYYY MMM" style="color: goldenrod; border-bottom: 1px solid black" 
+            [(ngModel)]="Payment.expiration"></ion-input>
           </ion-item>
         
       </div>

@@ -16,6 +16,7 @@ import { ProvidersUserProvider } from '../providers/providers-user/providers-use
 import { Camera } from "@ionic-native/camera";
 import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
 import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
+import { UserProfileProvider } from '../providers/user-profile/user-profile';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProvidersUserProvider,
-    Camera
+    Camera,
+    UserProfileProvider
   ]
 })
 export class AppModule {}

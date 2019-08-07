@@ -49,7 +49,7 @@
 
   <ion-item>
     <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Children</ion-label>
-    <ion-select style="color: goldenrod; border-bottom: 1px solid black">
+    <ion-select style="color: goldenrod; border-bottom: 1px solid black"  [(ngModel)]="Booking.children" ngDefaultControl>
         <ion-option>0</ion-option>
       <ion-option>1</ion-option>
       <ion-option>2</ion-option>
@@ -63,22 +63,8 @@
 
 
   <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Number of Rooms</ion-label>
-    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
-      <ion-option>1</ion-option>
-      <ion-option>2</ion-option>
-      <ion-option>3</ion-option>
-      <ion-option>4</ion-option>
-      <ion-option>5</ion-option>
-      <ion-option>6</ion-option>
-    </ion-select>
-  </ion-item>
-
-
-
-  <ion-item>
     <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Meal type</ion-label>
-    <ion-select  style="color: goldenrod; border-bottom: 1px solid black">
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid black" [(ngModel)]="Booking.meal">
       <ion-option value="460">Full Board R460.00</ion-option>
       <ion-option value="300">Half board R300.00</ion-option>
       <ion-option value="0">No meals thank you!</ion-option>
