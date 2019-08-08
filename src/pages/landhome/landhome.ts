@@ -24,16 +24,41 @@ import 'firebase/auth';
 })
 export class LandhomePage {
 user
+db = firebase.firestore();
+userprofile = {};
+personDetails = {
+  image: '',
+};
   constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider) {
-  this.user = firebase.auth().currentUser.uid
-  console.log(this.user)
-  this.authService.setUser(this.user);
+
   
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LandhomePage');
+    this.user = firebase.auth().currentUser.uid
+  console.log(this.user)
+  this.authService.setUser(this.user);
+  
+    let users = this.db.collection('userProfile');
+    let query = users.where("uid", "==", this.authService.getUser());
+    query.get().then(querySnapshot => {
+      if (querySnapshot.empty !== true){
+        console.log('Got data', querySnapshot);
+        querySnapshot.forEach(doc => {
+          
+          this.userprofile = doc.data();
+          this.personDetails.image = doc.data().image;
+          console.log('Profile Document: ', this.userprofile)
+        })
+      } else {
+        console.log('No data');
+      }
+      // dismiss the loading
+    }).catch(err => {
+      // catch any errors that occur with the query.
+      console.log("Query Results: ", err);
+    })
   }
   logout(): void {
 
