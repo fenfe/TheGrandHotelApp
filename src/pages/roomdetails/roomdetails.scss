@@ -1,63 +1,60 @@
 page-roomdetails {
-ion-content {
-    
-    bottom: 0;
-    .container {
-        border: 1px solid red;
-        width: 100%;
-        height: 100%;
-
-        //image
-        .image {
-            width: 90%;
-            height: 50%;
-            background: green;
-            position: relative;
-            left: 5%;
-          
-        }
-
-        .highlights {
-          background: rgba(167, 122, 37, 0.644);
-            width: 80%;
-            height: 24%;
-            position: relative;
-            left: 10%;
-            top: -10%;
-
-            h5 {
-               // border: 1px solid red;
-                margin: 0;
-                text-align: center;
-                color: white;
-            }
-            ul>li {
-              //  border: 1px solid blue;
-              margin-top: 2%;
-              padding-left: 7%;
-              overflow-y: auto;
-
-            }
-        }
-
-        .amenities {
-            border: 1px solid blue;
+    ion-content {
+        background: 1px solid black;
+       
+        .container {
+            
             width: 100%;
-          height: 40%;
-             position: relative;
-           // left: 10%;
-            top: 15%; 
+            height: 100%;
+
+            .image{
+                width: 100%;
+                height: 100%;
+            }
+        .room {
+            border: 2px solid red;
+            width: 80%;
+            height: 60%;
+            position: relative;
+            left: 10%;
+            top: -60%;
+
+            .list {
+                background: black;
+                border: 2px solid rgb(68, 0, 255);
+            width: 100%;
+            height: 60%;
 
             h5 {
-                color: rgba(167, 122, 37, 1)
+                color: white;
+                text-align:center;
+                letter-spacing: 1px;
+            }
+            li {
+                color: white;
+                text-align: left;
+                letter-spacing: 1px; 
+                line-height: 5vw;
+            }
+            }
+
+            .amenities {
+                border: 2px solid rgb(15, 151, 22);
+                width: 80%;
+                height: 40%; 
+                position: relative;
+            left: 10%;
             }
         }
 
+        //button
         button {
-            position: absolute;
-            left: 10%;
-            bottom: 3%;
+            position: relative;
+            top: -5%;
+            left: -10%;
+
         }
-    }
+        }
+      
 }
 }
