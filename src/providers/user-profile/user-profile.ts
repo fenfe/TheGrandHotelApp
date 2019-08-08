@@ -27,8 +27,8 @@ user
     return this.userProfile;
   }
 
-  getUser(){
-    return this.user;
+  getUser(): firebase.firestore.DocumentReference {
+    return this.userProfile;
   }
   setUser(val){
     this.user = val;
@@ -36,5 +36,8 @@ user
   }
   updateName(fullName: string, cellNo: string, Dob: string, gender:string,image:string,uid:string): Promise<any> {
     return this.userProfile.update({ fullName, cellNo ,Dob,gender,image,uid});
+  }
+  updateFullName(fullName: string){
+    return this.userProfile.update({ fullName});
   }
 }

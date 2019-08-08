@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
+import { UserProfileProvider } from '../../providers/user-profile/user-profile';
 /**
  * Generated class for the UserinfoPage page.
  *
@@ -22,15 +23,38 @@ export class UserinfoPage {
     image: '',
     fullName: '',
     Dob : '',
-    cellNo : ''
+    cellNo : '',
+    email : ''
   };
+  bookings = [];
+  data= false;
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private authService : ProvidersUserProvider,
-    private alertCtrl: AlertController,) {
+    private alertCtrl: AlertController,
+    private profileService : UserProfileProvider,
+    public loadingCtrl: LoadingController ) {
   }
 
   ionViewDidLoad() {
+    this.retrieveBooking();
+    this.authService.getUser();
+    console.log('yoh', this.authService.getUser())
+    this.db.collection('userProfile').doc(this.authService.getUser()).collection('Bookings').get().then(snapshot => {
+      console.log('check : ', snapshot);
+      if (!snapshot.empty) {
+        this.data = true;
+        snapshot.forEach( doc => {
+          console.log;
+
+          this.bookings.push(doc.data());
+      })
+      }
+    }).catch(err => {
+      console.log('An error occured');
+      this.data= false;
+    })
+
     let users = this.db.collection('userProfile');
     let query = users.where("uid", "==", this.authService.getUser());
     query.get().then(querySnapshot => {
@@ -43,20 +67,22 @@ export class UserinfoPage {
           this.personDetails.Dob =doc.data().Dob
           this.personDetails.fullName =doc.data().fullName
           this.personDetails.cellNo =doc.data().cellNo
+          this.personDetails.email =doc.data().email
           console.log('Profile Document: ', this.userprofile)
         })
       } else {
         console.log('No data');
       }
-      // dismiss the loading
+    
     }).catch(err => {
-      // catch any errors that occur with the query.
+    
       console.log("Query Results: ", err);
     })
   }
   async updateName(): Promise<void> {
     const alert = await this.alertCtrl.create({
-      //subHeader: 'Your first name & last name',
+     // subHeader: 'Your first name & last name',
+      title: 'Update your name',
       inputs: [
         {
           type: 'text',
@@ -64,11 +90,31 @@ export class UserinfoPage {
           placeholder: 'Your first name',
           value: this.personDetails.fullName
         },
+      ],
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Save',
+          handler: data => {
+          this.profileService.updateFullName(data.fullName);
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
+  async updateDob(): Promise<void> {
+    const alert = await this.alertCtrl.create({
+     // subHeader: 'Your first name & last name',
+      title: 'Update your Date of Birth',
+      inputs: [
         {
           type: 'text',
-          name: 'lastName',
-          placeholder: 'Your last name',
-          }
+          name: 'firstName',
+          placeholder: 'Your first name',
+          value: this.personDetails.Dob
+        },
       ],
       buttons: [
         { text: 'Cancel' },
@@ -81,5 +127,86 @@ export class UserinfoPage {
       ]
     });
     await alert.present();
+  }
+
+  async updateCell(): Promise<void> {
+    const alert = await this.alertCtrl.create({
+     // subHeader: 'Your first name & last name',
+      title: 'Update your cellNumber',
+      inputs: [
+        {
+          type: 'text',
+          name: 'firstName',
+          placeholder: 'Your first name',
+          value: this.personDetails.cellNo
+        },
+      ],
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Save',
+          handler: data => {
+          //  this.profileService.updateName(data.firstName, data.lastName);
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
+  async updateEmail(): Promise<void> {
+    const alert = await this.alertCtrl.create({
+     // subHeader: 'Your first name & last name',
+      title: 'Update your email',
+      inputs: [
+        {
+          type: 'text',
+          name: 'firstName',
+          placeholder: 'Your first name',
+          value: this.personDetails.email
+        },
+      ],
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Save',
+          handler: data => {
+          //  this.profileService.updateName(data.firstName, data.lastName);
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+  retrieveBooking() {
+    let users = this.db.collection('Bookings');
+    let load = this.loadingCtrl.create({
+      content: 'Loading'
+    });
+    load.present();
+    
+    console.log('User Bookings: ', this.authService.getUser());
+    let query = users.where("uid", "==", this.authService.getUser());
+    query.get().then(querySnapshot => {
+     
+      if (querySnapshot.empty !== true) {
+        console.log('Got data', querySnapshot);
+        querySnapshot.forEach(doc => {
+          this.bookings.push(doc.data());
+          console.log('Booking Document: ', this.bookings)
+       
+        });
+      } else {
+      //  this.showComp = true;
+        console.log('No Booking data');
+      }
+      // dismiss the loading
+      load.dismiss();
+    }).catch(err => {
+      // catch any errors that occur with the query.
+      console.log("Query Results: ", err);
+      // dismiss the loading
+      load.dismiss();
+    });
   }
 }

@@ -20,16 +20,26 @@
     <div class="info">
       <h4 (click)="updateName()"> {{personDetails.fullName}}</h4>
    
-      <p>{{personDetails.Dob}}</p>
-      <p>{{personDetails.cellNo}}</p>
-      <p>{{personDetails.email}}</p>
+      <p (click)="updateDob()">{{personDetails.Dob}}</p>
+      <p (click)="updateCell()">{{personDetails.cellNo}}</p>
+      <p (click)="updateEmail()">{{personDetails.email}}</p>
      
 
     </div>
     
   </div>
-  <div class="content">
-    <h4>Reservation history</h4>
-  </div>
+  
+  <div >
+    <div class="card" *ngFor="let n of bookings">
+        <h1>{{n.name}} {{n.surname}} <div class="fbutton">
+           
+        </div> </h1>
+        <p> Booked a {{n.roomname}} </p>
+        <p> Check In Date: {{n.checkin | date}} </p>
+        <p> Checkout Date: {{n.checkout | date}} </p>
+        <p>Contacts: {{n.phone}} | {{n.email}}</p>
+      </div>
+</div>
+
 </div>
 </ion-content>
