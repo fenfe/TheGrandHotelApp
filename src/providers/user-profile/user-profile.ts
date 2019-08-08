@@ -14,7 +14,7 @@ export class UserProfileProvider {
 
   public userProfile: firebase.firestore.DocumentReference;
   public currentUser: firebase.User;
-
+user
   constructor() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
@@ -27,7 +27,14 @@ export class UserProfileProvider {
     return this.userProfile;
   }
 
-  updateName(fullName: string, cellNo: string, Dob: string, gender:string,image:string): Promise<any> {
-    return this.userProfile.update({ fullName, cellNo ,Dob,gender,image});
+  getUser(){
+    return this.user;
+  }
+  setUser(val){
+    this.user = val;
+    console.log('User form Provider', this.user);
+  }
+  updateName(fullName: string, cellNo: string, Dob: string, gender:string,image:string,uid:string): Promise<any> {
+    return this.userProfile.update({ fullName, cellNo ,Dob,gender,image,uid});
   }
 }

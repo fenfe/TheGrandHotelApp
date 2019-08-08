@@ -18,7 +18,7 @@
               <ion-buttons>
                 <button ion-button icon-only (click)="selectImage(0)"><ion-icon name="attach"></ion-icon></button>
               </ion-buttons>
-              
+
                    <ion-item style="background: transparent">
                      <ion-label floating style="color: rgb(77, 36, 36)" ><ion-icon name="person" style="color: black"></ion-icon>  Fullname</ion-label>
                      <ion-input type="text" style="color: rgb(107, 41, 41)"   [(ngModel)]="profile.FullName" ngDefaultControl></ion-input>
@@ -43,11 +43,7 @@
                       </ion-select>
                     </ion-item>
 
-                    <br>
-                    <ion-item style="background: transparent">
-                       <ion-label floating style="color: rgb(12, 11, 11)" ><ion-icon name="images" style="color: black"></ion-icon> Upload image</ion-label>
-                       <ion-input  type="text" style="color: rgb(10, 10, 10)"></ion-input>
-                     </ion-item>
+                
                    <button id="skip" (click)="createprofile()" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Profile </button>
       
               </div> 

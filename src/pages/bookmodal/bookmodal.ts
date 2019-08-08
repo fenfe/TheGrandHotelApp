@@ -23,7 +23,6 @@ export class BookmodalPage {
   Booking = {
     uid: null, 
     name: null, 
-    surname: null, 
     checkin: null, 
     checkout: null, 
     adults: null, 
@@ -123,8 +122,7 @@ getProfile() {
     if (querySnapshot.empty !== true) {
       console.log('Got data', querySnapshot);
       querySnapshot.forEach(doc => {
-        this.Booking.name = doc.data().firstName;
-        this.Booking.surname = doc.data().lastName;
+        this.Booking.name = doc.data().fullName;
         this.Booking.email = doc.data().email;
         
       })

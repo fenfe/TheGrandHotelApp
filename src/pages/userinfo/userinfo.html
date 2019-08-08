@@ -14,15 +14,15 @@
 <div class="container">
     <ion-icon name="close-circle"></ion-icon>
   <div class="pic">
-    <img src="../../assets/imgs/kabo.jpg" >
+    <img src="{{personDetails.image}}" >
   </div>
   <div class="border">
     <div class="info">
-      <h4>Kaboentle <span id="surname">Dikutle</span></h4>
+      <h4 (click)="updateName()"> {{personDetails.fullName}}</h4>
    
-      <p>06/04/2013</p>
-      <p>082 510 3130</p>
-      <p>kabo@cutekid.cutie</p>
+      <p>{{personDetails.Dob}}</p>
+      <p>{{personDetails.cellNo}}</p>
+      <p>{{personDetails.email}}</p>
      
 
     </div>

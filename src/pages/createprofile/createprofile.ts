@@ -23,6 +23,7 @@ export class CreateprofilePage {
   public userProfile: any;
   db = firebase.firestore();
   storage = firebase.storage().ref();
+  uid
   profile= {
     uid: null,
     image: null,
@@ -33,15 +34,22 @@ export class CreateprofilePage {
    
   } as Profile
   constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider, private profileService : UserProfileProvider,public toast: ToastController, public loadingCtrl: LoadingController,  public loading: LoadingController, public camera: Camera) {
-  
+  this.uid = firebase.auth().currentUser.uid;
+      this.profileService.setUser(this.uid)
+      this.authService.setUser(this.uid)
+
   }
 
   ionViewDidLoad() {
     this.profileService.getUserProfile().get().then(userProfileSnapshot => {
       this.userProfile = userProfileSnapshot.data();
-      this.profile.uid = userProfileSnapshot.data().uid;
+      this.profile.uid = this.profileService.getUser();
      // this.birthDate = userProfileSnapshot.data().birthDate;
      console.log('check',   this.userProfile  )
+     console.log(this.uid)
+     console.log( this.profile.uid)
+
+
     });
   }
   async selectImage(){
@@ -97,7 +105,9 @@ export class CreateprofilePage {
         console.log('Room file Available at ', downloadURL);
         this.profile.image = downloadURL;
         console.log('Done');
-        this.profileService.updateName(this.profile.FullName,this.profile.phone, this.profile.Dob,this.profile.gender, downloadURL);
+
+
+        this.profileService.updateName(this.profile.FullName,this.profile.phone, this.profile.Dob,this.profile.gender, downloadURL, this.uid );
        
         load.present().then(() =>{
           this.navCtrl.setRoot(LandhomePage)
