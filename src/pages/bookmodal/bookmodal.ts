@@ -23,7 +23,6 @@ export class BookmodalPage {
   Booking = {
     uid: null, 
     name: null, 
-    surname: null, 
     checkin: null, 
     checkout: null, 
     adults: null, 
