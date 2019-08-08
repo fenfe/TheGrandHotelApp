@@ -6,15 +6,45 @@ page-landhome {
     bottom: 0;
 
     .container {
+      background: linear-gradient(rgba(0, 0, 0, 0.424));
      // border: 1px solid red;
       width: 100%;
       height: 100%;
       position: relative;
       overflow: hidden;
-     background-image: url('../../assets/imgs/beachhotel.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2)),url(../../assets/imgs/hotel-front3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    .head {
+      display: flex;
+      //border: 1px solid white;
+      width: 100%;
+      height: 10%;
+      z-index: 5;
+      position: relative;
+        left: 0%;
+        top: 0%;
+
+        .logo {
+         // border: 1px solid red;
+          width: 20%;
+          height: 100%;
+        }
+        .text {
+        //  border: 1px solid rgb(0, 60, 255);
+          width: 80%;
+          height: 100%;
+
+          h4 {
+            font-family: serif;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 7vw;
+          }
+        }
+    }
       
       /*  .topnav {
          display: flex;
@@ -50,17 +80,42 @@ page-landhome {
 
       //outline border
       .border {
-        border: 2px solid rgba(167, 122, 37, 1);
-        
-        width: 80%;
-        height: 80%;
+        border-bottom: 2px solid rgba(167, 122, 37, 1);
+        border-right: 2px solid rgba(167, 122, 37, 1);
+
+        border-top: 2px solid rgba(167, 122, 37, 1);
+        z-index: 5;
+        width: 60%;
+        height: 70%;
         position: relative;
-        left: 10%;
+        left: 0%;
         top: 5%;
 
+        .lorem {
+          //border: 1px solid white;
+          width: 80%;
+          height: 20%;
+          position: relative;
+          left: 10%;
+          top: 78%;
+          text-align: center;
+          p {
+            color: white;
+            letter-spacing: 1px;
+          }
+        }
         
         
 
+      }
+      .border2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.424));
+        width: 45%;
+        height: 70%;
+        position: relative;
+        left: 59%;
+        bottom: 65%;
+        //border: 3px solid black;
       }
 
       .image {
@@ -78,16 +133,6 @@ page-landhome {
 
        
 
-        //another style
-        
-
-        .cb-slideshow li div h3 {
-          // font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-          //font-size: 10%;
-       margin: 0;
-          // line-height: 200px; 
-        }
-
        
 
        
@@ -96,13 +141,13 @@ page-landhome {
 
         //buttons
         .btns {
-
-          //   border: 1px solid red;
-          width: 45%;
-          height: 50%;
+         // background: linear-gradient(rgba(0, 0, 0, 0.424));
+       // border: 1px solid red;
+          width: 50%;
+          height: 70%;
           position: absolute;
-          top: 20%;
-          left: 78%;
+          top: -65%;
+          left: 68%;
 
           //button
           .btn {
@@ -114,26 +159,31 @@ page-landhome {
             border-radius: 6px;
 
             .text {
-              background: rgba(167, 122, 37, 1);
+             // background: rgba(167, 122, 37, 1);
               width: 70%;
               height: 100%;
-
+              margin-top: 8%;
+              text-align: center;
               //  border-radius: 6px;
               p {
+                font-family: serif;
                 margin: 0;
-                //  border: 1px solid white;
-                text-align: center;
-                font-size: 5vw;
+                 // border: 1px solid white;
+              text-align: left;
+                font-size: 5.5vw;
                 color: white;
+                padding-top: 10%;
+                padding-left: 2.5%;
+                letter-spacing: 1px;
               }
 
             }
 
             .icon {
               background: rgba(167, 122, 37, 1);
-              width: 30%;
+              width: 35%;
               height: 100%;
-              margin: 0;
+              margin-top: 8%;
               padding: 0;
               display: flex;
               justify-content: center;

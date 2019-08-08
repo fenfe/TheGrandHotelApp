@@ -13,12 +13,15 @@
 <ion-content>
 <div class="container">
   <div class="image">
-    <img  *ngIf="room.image" src="{{room.image}}" alt="" width="100%" height=100%>
+    <img  *ngIf="room.image" src="{{room.image}}" alt="" width="100%" height=50%>
   </div>
-  <div class="highlights">
+
+
+  <div class="room">
     
-      <h5 *ngIf="room.name"> {{room.name}}</h5>
+     
       <div class="list">
+         <h5 *ngIf="room.name"> {{room.name}}</h5>
         <ul class="two">
           <li *ngFor="let f of room.highlights">{{f}}</li>
           
@@ -36,7 +39,7 @@
       </ul>
     </div> 
   </div>
- <button (click)="gopay()" ion-button full primary style="width: 80%">Book now</button>
+ <button (click)="gopay()" ion-button full mytheme style="width: 80%">Book now</button>
 </div>
 
 
@@ -52,4 +55,7 @@
     </p>
   </ion-card-content> -->
 <!-- </ion-card> -->
+
+
+
 </ion-content>
