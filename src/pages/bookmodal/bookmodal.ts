@@ -90,7 +90,7 @@ createBooking() {
            
             this.Booking.dateBooked = Date(); 
 
-              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser().uid ).set(this.Booking).then(res => {
+              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser()).set(this.Booking).then(res => {
                 this.toastCtrl.create({
                   message: 'Success',
                   duration: 3000
