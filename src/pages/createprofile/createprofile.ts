@@ -41,10 +41,15 @@ export class CreateprofilePage {
   }
 
   ionViewDidLoad() {
+    let loader = this.loadingCtrl.create({
+      content: "Getting you ready"
+    })
+    loader.present();
     this.profileService.getUserProfile().get().then(userProfileSnapshot => {
       this.userProfile = userProfileSnapshot.data();
      // this.profile.uid = this.profileService.getUser();
      // this.birthDate = userProfileSnapshot.data().birthDate;
+     loader.dismiss();
      console.log('check',   this.userProfile  )
      console.log(this.uid)
      console.log( this.profile.uid)
