@@ -4,6 +4,7 @@ import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
 import { UserProfileProvider } from '../../providers/user-profile/user-profile';
+import { LoginmodalPage } from '../loginmodal/loginmodal';
 /**
  * Generated class for the UserinfoPage page.
  *
@@ -207,6 +208,13 @@ export class UserinfoPage {
       console.log("Query Results: ", err);
       // dismiss the loading
       load.dismiss();
+    });
+  }
+  logout(): void {
+
+    this.authService.logoutUser().then(() => {
+      this.navCtrl.push(LoginmodalPage);
+     
     });
   }
 }
