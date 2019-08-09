@@ -2,7 +2,9 @@
 
 <ion-content>
  <div class="container">
-  
+
+  <div id="wave"></div>
+
   <ion-slides #slides pager>
     <ion-slide style="background-image: url(../../assets/imgs/beach.jpg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;" >
    <div class="text">
@@ -16,7 +18,7 @@
         
    </ion-slide> 
 
-   <!-- slide2 -->
+   
    <ion-slide style="background:url(../../assets/imgs/fifs.jpg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;" width="50%">
       
     <div class="text2">
@@ -24,13 +26,14 @@
       </div>
 
     <div class="btn2">
-     <button id="next" (click)="next()"  ion-button clear  large style="color: #fff; width: 45%; letter-spacing: 3px; background:rgb(5, 131, 131, 0.808)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Next</button>
+     <button id="next" (click)="next()"  ion-button clear  large style="color: #fff; width: 45%; letter-spacing: 3px; background:
+      ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Next</button>
      <button id="skip" (click)="registerModal()" ion-button clear  large style="color: #fff; width: 45%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Skip </button>
     </div>
    
 </ion-slide> 
 
-<!-- slide3 -->
+
 <ion-slide >
       
   <div class="text3">
@@ -39,7 +42,7 @@
     </div>
 
     <div class="image" style="background-image: url(../../assets/imgs/one.jpeg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;">
-     <!--  <img src="../../assets/imgs/kabo.jpg" width="100%" height="100%"> -->
+   
     </div>
 
   <div class="btn3">
@@ -49,30 +52,6 @@
  
 </ion-slide> 
 
-  </ion-slides>
+  </ion-slides> 
  </div> 
-<!-- 
-<ul class="cb-slideshow">
-  
-<li>
-  <span>image 1</span>
-  <div><h3>relaxation</h3></div>
-</li>
-
-
-<li>
-    <span>image 1</span>
-    <div><h3>relaxation</h3></div>
-  </li>
-
-
-<li>
-    <span>image 1</span>
-    <div><h3>relaxation</h3></div>
-  </li>
-
-</ul>
-
-
- -->
 </ion-content>
