@@ -6,14 +6,14 @@
 -->
 <ion-header >
   <ion-navbar color="mytheme">
-    <ion-title>{{room.name}}</ion-title>
+    <ion-title style="text-align: center;letter-spacing:1.5px">{{room.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 <div class="container">
   <div class="image">
-    <img  *ngIf="room.image" src="{{room.image}}" alt="" width="100%" height=50%>
+    <img  *ngIf="room.image" src="{{room.image}}" alt="" width="100%" height=100%>
   </div>
 
 
@@ -21,41 +21,35 @@
     
      
       <div class="list">
-         <h5 *ngIf="room.name"> {{room.name}}</h5>
-        <ul class="two">
+        <div class="head">
+               <h5 *ngIf="room.name"> {{room.name}}</h5>
+        </div>
+    <div class="content">
+      <ul class="two">
           <li *ngFor="let f of room.highlights">{{f}}</li>
           
         </ul>
+    </div>
+        
       
   </div>
 
 
   <div class="amenities">
-  
-      <h5>Amenities</h5>
-      <ul>
+  <div class="head"> 
+    <h5>Amenities</h5>
+  </div>
+      <div class="content">
+  <ul>
         <li  *ngFor="let f of room.amenities" >{{f}}</li>
-      
       </ul>
+      </div>
+    
     </div> 
   </div>
- <button (click)="gopay()" ion-button full mytheme style="width: 80%">Book now</button>
-</div>
+  <div class="btn">
+    <button (click)="gopay()" ion-button full color="mytheme" style="width: 60%; letter-spacing: 1.5px">Book now</button> 
 
-
-<!-- <ion-card> -->
-  <!-- <img src=""/>
-  <ion-card-content>
-    <ion-card-title>
-      Nine Inch Nails Live
-      </ion-card-title>
-    <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-    </p>
-  </ion-card-content> -->
-<!-- </ion-card> -->
-
-
-
+  </div>
+ </div>
 </ion-content>

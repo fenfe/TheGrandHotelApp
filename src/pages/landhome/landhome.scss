@@ -6,20 +6,19 @@ page-landhome {
     bottom: 0;
 
     .container {
-      background: linear-gradient(rgba(0, 0, 0, 0.424));
      // border: 1px solid red;
       width: 100%;
       height: 100%;
       position: relative;
       overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.2)),url(../../assets/imgs/hotel-front3.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.424)),url(../../assets/imgs/hotel-front3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     .head {
       display: flex;
-      //border: 1px solid white;
+     // border: 1px solid white;
       width: 100%;
       height: 10%;
       z-index: 5;
@@ -28,12 +27,12 @@ page-landhome {
         top: 0%;
 
         .logo {
-         // border: 1px solid red;
+        //  border: 1px solid red;
           width: 20%;
           height: 100%;
         }
         .text {
-        //  border: 1px solid rgb(0, 60, 255);
+        // border: 1px solid rgb(0, 60, 255);
           width: 80%;
           height: 100%;
 
@@ -80,10 +79,11 @@ page-landhome {
 
       //outline border
       .border {
-        border-bottom: 2px solid rgba(167, 122, 37, 1);
-        border-right: 2px solid rgba(167, 122, 37, 1);
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        
 
-        border-top: 2px solid rgba(167, 122, 37, 1);
+        border-top: 2px solid white;
         z-index: 5;
         width: 60%;
         height: 70%;
@@ -91,17 +91,56 @@ page-landhome {
         left: 0%;
         top: 5%;
 
-        .lorem {
-          //border: 1px solid white;
+        .border3 {
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+          background: url(../../assets/imgs/hotel-front3.jpg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+          border-top: 2px solid white;
+          z-index: 7;
           width: 80%;
+          height: 85%;
+          position: relative;
+          left: 0%;
+          top: 7.5%;
+
+        }
+        .welcome {
+          //border: 1px solid white;
+          width: 100%;
+          height: 10%;
+          position: relative;
+  
+          top: 65%;
+      
+          h4 {
+           // border: 1px solid green;
+              margin-top: 0;
+              text-align: center;
+              color: white;
+              font-size: 7vw;
+              letter-spacing: 1px;
+          }
+        }
+
+        .lorem {
+        //  border: 1px solid white;
+          width: 90%;
           height: 20%;
           position: relative;
-          left: 10%;
-          top: 78%;
+          left: 5%;
+          top: 69%;
           text-align: center;
           p {
             color: white;
             letter-spacing: 1px;
+            font-family: serif;
+            font-size: 4vw;
+            padding: 0;
+            margin: 0;
           }
         }
         
@@ -109,13 +148,15 @@ page-landhome {
 
       }
       .border2 {
-        background: linear-gradient(rgba(0, 0, 0, 0.424));
+    // background: linear-gradient(rgba(0, 0, 0, 0.424));
         width: 45%;
         height: 70%;
         position: relative;
         left: 59%;
         bottom: 65%;
-        //border: 3px solid black;
+       // border: 3px solid black;
+
+        
       }
 
       .image {
@@ -159,12 +200,12 @@ page-landhome {
             border-radius: 6px;
 
             .text {
-             // background: rgba(167, 122, 37, 1);
+           
               width: 70%;
               height: 100%;
               margin-top: 8%;
               text-align: center;
-              //  border-radius: 6px;
+                border-radius: 6px;
               p {
                 font-family: serif;
                 margin: 0;
@@ -180,18 +221,25 @@ page-landhome {
             }
 
             .icon {
-              background: rgba(167, 122, 37, 1);
-              width: 35%;
-              height: 100%;
-              margin-top: 8%;
-              padding: 0;
+              border: 1px solid white;
+              background: linear-gradient(rgba(0, 0, 0, 0.938));
+              width: 25%;
+              height: 80%;
+              margin-top: 13%;
+            //  padding: 0;
               display: flex;
               justify-content: center;
               align-content: center;
-
+              border-radius: 5px;
+              position: relative;
+              svg {
+                position: absolute;
+                top: 0;
+                font-weight: bolder;
+              } 
               ion-icon {
 
-                font-size: 7vw;
+                font-size: 5vw;
                 margin: 0;
                 padding: 0;
               }

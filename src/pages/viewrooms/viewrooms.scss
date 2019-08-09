@@ -7,17 +7,21 @@ ion-content {
         display: flex;
         flex-wrap: wrap;
         overflow-y: auto;
+          justify-content:space-between;
+
         .card {
            // border: 1px solid black;
-            width: 50%;
+            width: 48%;
             height: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           
                 .border {
-              //  border: 1px solid rgba(167, 122, 37, 1);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 width: 75%;
                 height: 55%;  
                  position: relative;
                 left:5%;
-                top: 5%; 
+                top: 15%; 
 
                 
                 
@@ -31,10 +35,10 @@ ion-content {
                height: 66%;  
                position: relative;
                left:15%;
-               top: -45%;
+               top: -35%;
                z-index: -4;
-                border: 2px solid  rgba(167, 122, 37, 1);
-                
+               box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+               background: linear-gradient(to top, #000210 30%,  #1c465c 60%);
                .stars {
                    display: flex;
                    flex-direction: column;
@@ -47,8 +51,8 @@ ion-content {
                    z-index: -4;
                }
                p {
-            //  border: 1px solid red;
-                color: rgb(228, 20, 20);
+             // border: 1px solid red;
+                //color: rgb(228, 20, 20);
                 position: relative;
                 top: 23%;
                 padding-left: 5%;

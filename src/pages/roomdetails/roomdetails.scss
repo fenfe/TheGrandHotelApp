@@ -1,57 +1,107 @@
 page-roomdetails {
     ion-content {
-        background: 1px solid black;
+        
        
         .container {
-            
+            overflow-y: fixed;
             width: 100%;
             height: 100%;
 
             .image{
-                width: 100%;
-                height: 100%;
+                width: 90%;
+                height: 45%;
+               // border: 1px solid green;
+                position: relative;
+                left: 5%;
             }
         .room {
-            border: 2px solid red;
+         //  border: 2px solid rgb(12, 11, 11);
             width: 80%;
-            height: 60%;
+            height: 57%;
             position: relative;
-            left: 10%;
-            top: -60%;
+           left: 10%;
+            top: -10%;
 
-            .list {
-                background: black;
-                border: 2px solid rgb(68, 0, 255);
-            width: 100%;
-            height: 60%;
-
-            h5 {
-                color: white;
+            .head {
+               // border: 1px solid red;
+            overflow-y:fixed;
+                h5 {
+                color: rgb(199, 151, 18);
                 text-align:center;
                 letter-spacing: 1px;
+               
             }
-            li {
-                color: white;
-                text-align: left;
-                letter-spacing: 1px; 
-                line-height: 5vw;
             }
+
+            .content {
+              //  border: 1px solid blue;
+                width: 100%;
+                height: 75%;
+                overflow-y: auto;
+  
+                  li {
+                  color: rgb(15, 15, 15);
+                  text-align: left;
+                  letter-spacing: 1px; 
+                  line-height: 5vw;
+                    
+  
+              }
+              }
+
+          
+            .list {
+
+
+         
+         background: whitesmoke;
+            width: 100%;
+            height: 50%;
+           
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+           
+           
+            
+            
             }
 
             .amenities {
-                border: 2px solid rgb(15, 151, 22);
-                width: 80%;
-                height: 40%; 
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+             background: whitesmoke;
+                width: 100%;
+                height: 37%; 
                 position: relative;
-            left: 10%;
+                top: 5%;
+                h5 {
+                    color: rgb(199, 151, 18);
+                    text-align:center;
+                    letter-spacing: 1px;
+                }
+
+                .content {
+                  //  border: 1px solid blue;
+                    width: 100%;
+                    height: 65%;
+                    overflow-y: auto;
+      
+                      li {
+                      color: rgb(15, 15, 15);
+                      text-align: left;
+                      letter-spacing: 1px; 
+                      line-height: 5vw;
+                        
+      
+                  }
+                  }
             }
         }
 
         //button
-        button {
-            position: relative;
-            top: -5%;
-            left: -10%;
+        .btn {
+           position: relative;
+            top: -15%;
+            left: 20%; 
 
         }
         }
