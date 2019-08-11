@@ -11,31 +11,32 @@
 </ion-header>
 
 <ion-content>
-  <div class="container">
+  <div class="container" style="background-image: linear-gradient(to bottom, #000210a1 60%,  #1c465c67 100%),url(../../assets/imgs/chilling2.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;opacity: 4;">
     <div class="head">
       <h4>Please complete the form</h4>
     </div>
 
  <!-- inputs -->
  <div class="inputs">
-  <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-In date</ion-label>
-    <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+  <ion-item style="background: transparent">
+    <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px">Check-In date</ion-label>
+    <ion-datetime style="color: goldenrod; border-bottom: 1px solid white" displayFormat="DD/MM/YYYY"
     [(ngModel)]="Booking.checkin" ngDefaultControl></ion-datetime>
   </ion-item>
+  <br>
 
 
-  <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Check-out date</ion-label>
-    <ion-datetime style="color: goldenrod; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+  <ion-item style="background: transparent">
+    <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px">Check-out date</ion-label>
+    <ion-datetime style="color: goldenrod; border-bottom: 1px solid white" displayFormat="DD/MM/YYYY"
     [(ngModel)]="Booking.checkout" ngDefaultControl></ion-datetime>
   </ion-item>
 
+  <br>
 
-
-  <ion-item >
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500"  > Adults</ion-label>
-    <ion-select  style="color: goldenrod; border-bottom: 1px solid black"  [(ngModel)]="Booking.adults" ngDefaultControl>
+  <ion-item  style="background: transparent">
+    <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px"  > Adults</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid white"  [(ngModel)]="Booking.adults" ngDefaultControl>
       <ion-option>1</ion-option>
       <ion-option>2</ion-option>
       <ion-option>3</ion-option>
@@ -44,12 +45,12 @@
       <ion-option>6</ion-option>
     </ion-select>
   </ion-item>
+  <br>
 
 
-
-  <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Children</ion-label>
-    <ion-select style="color: goldenrod; border-bottom: 1px solid black"  [(ngModel)]="Booking.children" ngDefaultControl>
+  <ion-item style="background: transparent">
+    <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px">Children</ion-label>
+    <ion-select style="color: goldenrod; border-bottom: 1px solid white"  [(ngModel)]="Booking.children" ngDefaultControl>
         <ion-option>0</ion-option>
       <ion-option>1</ion-option>
       <ion-option>2</ion-option>
@@ -60,24 +61,25 @@
     </ion-select>
   </ion-item>
 
+  <br>
 
-
-  <ion-item>
-    <ion-label floating style="color: black; font-size: 100%; font-weight: 500">Meal type</ion-label>
-    <ion-select  style="color: goldenrod; border-bottom: 1px solid black" [(ngModel)]="Booking.meal">
-      <ion-option value="460">Full Board R460.00</ion-option>
-      <ion-option value="300">Half board R300.00</ion-option>
+  <ion-item style="background: transparent">
+    <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px">Meal type</ion-label>
+    <ion-select  style="color: goldenrod; border-bottom: 1px solid white" [(ngModel)]="Booking.meal">
+      <ion-option value="460">3 Meals R460.00</ion-option>
+      <ion-option value="300">2 Meals R300.00</ion-option>
       <ion-option value="0">No meals thank you!</ion-option>
     </ion-select>
   </ion-item>
 </div>
 
 <div class="btn">
-  <button id="next" (click)="''" ion-button clear  large
-    style="color: #fff; width: 48%; letter-spacing: 3px; background:rgb(53, 52, 52)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Cancel</button>
-  <button id="skip" (click)="createBooking()" ion-button clear large
-    style="color: #fff; width: 48%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;" >Continue
-  </button>
+  <button id="next" (click)="createBooking()" ion-button clear  large
+    style="color: #fff; width: 100%; letter-spacing: 3px; background:rgba(167, 122, 37, 1); font-size:4vw; font-family: serif;">Continue</button>
+ <!--  <button id="skip" (click)="createBooking()" ion-button clear large
+    style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 4vw;font-family: serif;" >Cancel
+  </button> -->
+  <button  ion-button (click)="gopayform()">next</button>
 </div> 
 
 </div>

@@ -37,6 +37,10 @@ export class PaymentmodalPage {
     console.log('room info', this.room)
   }
 
+  //temporary seko remove it if i forget
+  gopay(){
+    this.navCtrl.push(PaymentmodalPage)
+  }
   gopayform(){
     if (
      !this.Payment.cardHolderName||

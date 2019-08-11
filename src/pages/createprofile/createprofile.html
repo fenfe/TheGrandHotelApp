@@ -6,10 +6,10 @@
 </ion-header> -->
 
 <ion-content>
-    <div class="container">
+    <div class="container" style="background-image: linear-gradient(to bottom, #0002109d 60%,  #1c465c60 100%),url(../../assets/imgs/outside.jpeg);background-size: cover;background-position: center;background-repeat: no-repeat;opacity: 4;">
         <div class="head">
           <h1>Welcome Back</h1>
-          <p>Login with your account</p>
+          <p>Create your profile here</p>
         </div>
       
         
@@ -17,6 +17,7 @@
             <!--      <ion-list > -->
               <div class="propic">
                 <div class="profile-image">
+                    <ion-icon name="person" style="color: white; font-size: 30vw;"></ion-icon>
                                     <button id="camera" style="font-size: 7vw; color: white;background: transparent" (click)="selectImage(0)"><ion-icon name="camera"></ion-icon></button>
 
                    
@@ -44,7 +45,7 @@
                     <br>
                     
                      <ion-item style="background: transparent">
-                      <ion-label>Gender</ion-label>
+                      <ion-label style="color:  white">Gender</ion-label>
                       <ion-select     [(ngModel)]="profile.gender" ngDefaultControl>
                         <ion-option value="Female">Female</ion-option>
                         <ion-option value="Male">Male</ion-option>

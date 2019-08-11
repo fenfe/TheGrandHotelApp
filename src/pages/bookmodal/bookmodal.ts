@@ -48,7 +48,7 @@ dateBooked : null
     this.getProfile()
   }
 gopayform(){
-  this.navCtrl.push(PaymentmodalPage)
+  this.navCtrl.push(PaymentmodalPage);
 }
 createBooking() {
   if (
