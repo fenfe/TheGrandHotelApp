@@ -1,3 +1,4 @@
+import { CreateprofilePage } from './../createprofile/createprofile';
 import { UserinfoPage } from './../userinfo/userinfo';
 import { ViewroomsPage } from './../viewrooms/viewrooms';
 
@@ -73,5 +74,9 @@ personDetails = {
   }
   userInfo(){
     this.navCtrl.push(UserinfoPage);
+  }
+
+  back(){
+    this.navCtrl.push(CreateprofilePage);
   }
 }

@@ -7,7 +7,7 @@
 
 
 <ion-content>
-<div class="container" style="background-image: url(../../assets/imgs/background.jpeg);background-size: cover;background-position:center center;background-repeat: no-repeat; z-index: 0;">
+<div class="container" style="background-image: linear-gradient(to bottom, #0002107e 60%,  #1c465c67 100%),url(../../assets/imgs/outside.jpeg);background-size: cover;background-position: center;background-repeat: no-repeat;opacity: 4;">
   <div class="head">
     <h1>Create an Account</h1>
     <p>and have the luxury of convenience to book with us anytime, anywhere </p>
@@ -17,24 +17,27 @@
   <div class="inputs">
       <!--      <ion-list > -->
         <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
-          <ion-item style="background: transparent">
-            <ion-label floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
+          <ion-item style="background:rgba(25, 36, 51, 0.589)">
+            <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
             <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" 
             [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
           </ion-item>
-        <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
+
+        <ion-item style="background: transparent;  border-bottom: none"  class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
           <p style="color: red">Please enter a valid email.</p>
         </ion-item>
-          <ion-item style="background: transparent">
-            <ion-label floating style="color: white; font-weight: 700; letter-spacing: 1px" ><ion-icon name="lock" style="color:white"></ion-icon>  Password</ion-label>
-            <ion-input  type="password" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="password"
+        <br>
+          <ion-item style="background: rgba(25, 36, 51, 0.589); border-radius: 6px;">
+            <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="lock" style="color:white"></ion-icon>  Password</ion-label>
+            <ion-input  type="password" style="color: white;border-bottom:transparent;font-weight: 400; letter-spacing: 1px" formControlName="password"
             [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
           </ion-item>
-          <ion-item class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+
+          <ion-item style="background: transparent; border-bottom: none" class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
             <p style="color: red">Your password needs more than 6 characters.</p>
           </ion-item>
           <br>
-          <button id="skip" type="submit" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Account </button>
+          <button id="skip" type="submit" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px;border-radius: 6px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;  box-shadow: 0 4px 8px 0 rgba(114, 110, 110, 0.329), 0 6px 20px 0 rgba(73, 68, 68, 0.445); ">Create my Account </button>
 
         </form>
              
@@ -43,7 +46,7 @@
 
         <!-- foot -->
         <div class="foot">
-          <p>Already have an account? <span><h6 (click)="loginModal()">Login</h6></span></p>
+          <p>Already have an account? <span><h6 (click)="loginModal()" >Login</h6></span></p>
         </div>
 
 </div>

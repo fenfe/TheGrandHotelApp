@@ -3,13 +3,67 @@ ion-content {
     border: 1px solid red;
     width: 100%;
     height: 100%;
+        background: linear-gradient(to top, #000210ea 30%,  #1c465c 60%);
 
     .container {
-        border: 1px solid rgb(29, 230, 22);
+
+        border: 1px solid rgb(19, 34, 247);
         width: 80%;
         height: 100%;
         position: relative;
         left: 10%;
+
+       .head {
+        border: 1px solid black;
+        height: 15%;
+        h1 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+        }
+
+        .inputs {
+            border: 1px solid red;
+            height: 70%;
+.propic {
+    border: 1px solid white;
+    height: 45%;
+      .profile-image {
+                
+                    height: 25vh;
+                    width:  25vh;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                    border: 10px solid rgba(0, 0, 0, 0.733);
+                    position: relative;
+                    left: 23%;
+                    top: 3%;
+                    border: 1px solid white;
+                 
+            }
+
+           button {
+               // border: 1px solid green;
+                position: relative;
+                left: 80%;
+                bottom: -20%;
+                z-index: 5;
+            }
+}
+          
+        } 
+        .btn {
+            border: 1px solid green;
+            height: 15%;
+            button {
+                position: relative;
+                top: 20%;
+            }
+          
+        }
     }
 }
 }

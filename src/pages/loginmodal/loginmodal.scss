@@ -1,59 +1,73 @@
 page-loginmodal {
-ion-content {
-    .container {
-        width: 100%;
-        height: 100%;
-       // border: 1px solid red;
-       overflow: hidden;
-        .head {
-            position: relative;
-            left: 10%;
-            top: 0;
-            width: 80%;
-            height: 50%;
-           //border: 1px solid yellow;
-            h1 {//border: 1px solid green;
-                text-align: center;
-                color: white;
-              position: relative;
-              top: 5%;
-
-            }
-            p {color: white;
-                //border: 1px solid red;
-                text-align: center;
-                letter-spacing:2px;
-            }
-        }
-
-        //inputs
-        .inputs {
-            width: 80%;
-            height: 38%;
-          //  border: 1px solid rgb(0, 4, 255); 
-            position: relative;
-            left: 10%;
-
-           
-        }
-        
-        .foot {
-           // border: 1px solid goldenrod;
-            width: 80%;
-       
-            position: relative;
-            left: 10%;
-            bottom: 0;
-
-            p {margin: 0;
-                color: white;
-                letter-spacing: 1px;
-               // border: 1px solid red;
+    ion-content {
+        .container {
+          
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            //head
+            .head {
                 position: relative;
-                text-align: center;
-                top: 50%;
+                left: 10%;
+                top: 0;
+                width: 80%;
+                height: 40%;
+               //border: 1px solid yellow;
+                h1 {//border: 1px solid green;
+                    text-align: center;
+                    color: white;
+                  position: relative;
+                  top: 10%;
+                  font-family: serif;
+                  letter-spacing: 1.3px;
+                  font-size: 9vw;
+    
+                }
+                p {color: white;
+                    //border: 1px solid red;
+                    text-align: center;
+                    letter-spacing:2px;
+                    position: relative;
+                  top: 10%;
+                  font-size: 90%;
+                }
+            }
+    
+            //inputs
+            .inputs {
+                width: 80%;
+                height: 50%;
+               // border: 1px solid rgb(248, 248, 255); 
+                position: relative;
+                left: 10%;
+                top: 5%;
+    
+               
+            }
+            
+            .foot {
+                //border: 1px solid goldenrod;
+                width: 80%;
+                height: 25%;
+                position: relative;
+                left: 10%;
+                bottom: 0;
+    
+                p {margin: 0;
+                    color: white;
+                    letter-spacing: 1px;
+                 //  border: 1px solid red;
+                    position: relative;
+                    text-align: center;
+                    top: 50%;
+                }
+                h6 {
+                    font-family: serif;
+                    letter-spacing: 1.3px;
+    
+                }
             }
         }
     }
-}
-}
+    }
+    
