@@ -24,7 +24,7 @@
                      loginForm.controls['email'].touched"></ion-input>
                    </ion-item>
 
-                   <ion-item style="background: transparent" class="error-message" *ngIf="!loginForm.controls['email'].valid &&
+                   <ion-item no-lines style="background: transparent" class="error-message" *ngIf="!loginForm.controls['email'].valid &&
                    loginForm.controls['email'].touched">
                   <p style="color: red">Please enter a valid email address.</p>
                 </ion-item>
@@ -35,7 +35,7 @@
                      [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched"></ion-input>
                    </ion-item>
 
-                   <ion-item style="background: transparent" class="error-message" *ngIf="!loginForm.controls['password'].valid
+                   <ion-item no-lines style="background: transparent" class="error-message" *ngIf="!loginForm.controls['password'].valid
                    && loginForm.controls['password'].touched">
                    <p style="color: red">Your password needs more than 6 characters.</p>
                  </ion-item>

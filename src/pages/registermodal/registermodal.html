@@ -23,7 +23,7 @@
             [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty"></ion-input>
           </ion-item>
 
-        <ion-item style="background: transparent;  border-bottom: none"  class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
+        <ion-item no-lines style="background: transparent;  border-bottom: none"  class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
           <p style="color: red">Please enter a valid email.</p>
         </ion-item>
         <br>
@@ -33,8 +33,8 @@
             [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty"></ion-input>
           </ion-item>
 
-          <ion-item style="background: transparent; border-bottom: none" class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
-            <p style="color: red">Your password needs more than 6 characters.</p>
+          <ion-item no-lines style="background: transparent; border-bottom: none" class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+            <p style="color: rgb(238, 25, 25)">Your password needs more than 6 characters.</p>
           </ion-item>
           <br>
           <button id="skip" type="submit" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px;border-radius: 6px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;  box-shadow: 0 4px 8px 0 rgba(114, 110, 110, 0.329), 0 6px 20px 0 rgba(73, 68, 68, 0.445); ">Create my Account </button>

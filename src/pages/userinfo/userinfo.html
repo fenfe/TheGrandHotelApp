@@ -12,11 +12,11 @@
 
 <ion-content>
 <div class="container">
-    <ion-icon name="close-circle"></ion-icon>
-  <div class="pic">
+    <!-- <ion-icon name="close-circle"></ion-icon> -->
+  <!-- <div class="pic">
     <img src="{{personDetails.image}}" >
-  </div>
-  <div class="border">
+  </div> -->
+ <!--  <div class="border">
     <div class="info">
       <h4 (click)="updateName()"> {{personDetails.fullName}}</h4>
    
@@ -27,7 +27,7 @@
 
     </div>
     
-  </div>
+  </div> -->
   
   <div >
     <div class="card" *ngFor="let n of bookings">
@@ -40,7 +40,7 @@
         <p>Contacts: {{n.phone}} | {{n.email}}</p>
       </div>
 </div>
-<button ion-button color="danger" (click)="logout()">Logout</button>
-</div>
+<!-- <button ion-button color="danger" (click)="logout()">Logout</button>
+ --></div>
 
 </ion-content>

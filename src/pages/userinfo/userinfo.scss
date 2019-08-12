@@ -1,72 +1,11 @@
 page-userinfo {
 ion-content {
+    width: 100%;
+    height: 100%;
     .container {
-        border: 1px solid red;
-        width: 100%;
-        height: 100%;
-
-        .pic {
-            background: green;
-            width: 60%;
-            height: 40%;
-            z-index: 5;
-            position: relative;
-            top: 5%;
-            left: 30%;
-            img {
-                object-fit: cover;
-                
-                 width: 100%;
-                height: 100%;
-            }
-        }
-        .border {
-            background:rgba(167, 122, 37, 1);
-            width: 60%;
-            height: 45%;
-            position: absolute;
-            top: 15%;
-            left: 10%;
-            .info {
-               // border: 1px solid red;
-                width: 100%;
-                height: 33%;
-                position: relative;
-                top: 66%;
-                margin: 0;
-
-                p {
-                    margin: 0;
-                   padding: 2px;
-                    color: white;
-                    letter-spacing: 1px;
-                }
-                h4 {font-weight: bolder;
-                    margin: 0;
-                    letter-spacing: 2px;
-                    #surname {
-                        font-weight: 200;
-                    }
-                }
-
-            }
-        }
-
-        .content {
-            border: 2px solid rgba(167, 122, 37, 1);;
-            width: 80%;
-            height: 30%;
-            position: relative;
-            top: 25%;
-            left: 10%;
-            background: whitesmoke;
-            h4 {
-                text-align: center;
-                color: rgb(22, 21, 21);
-
-            }
-        }
+       
+        
     }
-
+  
 }
 }

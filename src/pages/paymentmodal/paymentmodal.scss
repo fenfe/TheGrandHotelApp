@@ -1,53 +1,114 @@
 page-paymentmodal {
 ion-content {
+    .scroll-content{
+        padding-bottom: 0 !important;
+    }
     .container {
         width: 100%;
-        height: 100%;
-        border: 1px solid red;
+   height: 100%;
+        //border: 1px solid red;
        overflow: hidden;
+           
+       .icon {
+        border: 1px solid red;
+         width: 5%;
+         height: 5%;
+         transform: rotate(180deg);
 
+         ion-icon {
+           position: relative;
+           top: 35%;
+           left: 7%;
+           transform: rotate(180deg);
+         }
+        
+       }
+        
         .head {
-            width: 80%;
-            height: 35%;
-            border: 1px solid rgb(33, 4, 161);
-            position: relative;
-            left: 10%;
+            width: 100%;
+            height: 20%;
+            //border: 1px solid rgb(33, 4, 161);
+         background-image: url(../../assets/imgs/wave.svg);
+         transform: rotate(180deg);
+         
 
-            h1 {
-                text-align: center;
-                font-size: 5vw;
-            }
-            .cards {
-              //  border: 1px solid red;
+
+            //new stuff
+            .logo {
+               // background-image: url(../../assets/imgs/wave.svg);
+                
                 display: flex;
-                position: relative;
-                top: 35%;
-                img {
+             //border: 1px solid rgb(17, 192, 11);
+                width: 100%;
+                transform: rotate(180deg);
+                position: absolute;
+                top: 10%;
+              
+    
+                .logo1 {
+               //  border: 1px solid rgb(8, 8, 8);
+                    width: 30%;
+                    height: 60%;
+                    text-align: right;
+           
+    
+                }
+                .logo2 {
+                  //border: 1px solid rgb(235, 23, 146);
+                    width: 70%;
+                    height: 60%;
                     position: relative;
-                    left: 40%;
+                    top: 20%;
+                  
+                
+                    h3 {//border: 1px solid red;
+                        font-family: serif;
+                        color: rgb(3, 18, 68);
+                           text-align: left;
+                           letter-spacing: 2px;
+                    }
                 }
             }
-        }
+
+            
+           
+            }
+            .cards {
+               // border: 1px solid red;
+                 display: flex;
+                width: 80%;
+                height: 18%;
+                position: absolute;
+                left: 10%;
+                justify-content: center;
+                align-items: center;
+                
+                #visa {
+                    margin-left: 5%;
+                }
+                 }
 
         //inputs
         .inputs {
             width: 80%;
             height: 50%;
-           // border: 1px solid rgb(4, 139, 49);
+         //  border: 1px solid rgb(4, 139, 49);
             position: relative;
             left: 10%;
+            top: 15%;
         }
 
         //buttons
         .btn {
             width: 80%;
-           // border: 1px solid red;
-            height: 15%;
+          // border: 1px solid red;
+            height: 10%;
             display: flex;
             position: relative;
             left: 10%;
-            top: 2%;
+            top: 15%;
         }
     }
 }
+
 }

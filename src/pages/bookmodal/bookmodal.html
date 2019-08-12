@@ -4,17 +4,21 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
-    <ion-title>bookmodal</ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content>
   <div class="container" style="background-image: linear-gradient(to bottom, #000210a1 60%,  #1c465c67 100%),url(../../assets/imgs/chilling2.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;opacity: 4;">
-    <div class="head">
-      <h4>Please complete the form</h4>
-    </div>
+<div class="icon">
+    <ion-icon name="arrow-round-back" style="color: white; font-size: 8vw"></ion-icon>
+</div>
+    <div class="logo">
+        <div class="logo1">
+          <img src="../../assets/imgs/compass.png" width="70%" >
+        </div>
+        <div class="logo2">
+           <h3>The Grand Hotel</h3>
+        </div>
+       </div>
 
  <!-- inputs -->
  <div class="inputs">
@@ -23,7 +27,7 @@
     <ion-datetime style="color: goldenrod; border-bottom: 1px solid white" displayFormat="DD/MM/YYYY"
     [(ngModel)]="Booking.checkin" ngDefaultControl></ion-datetime>
   </ion-item>
-  <br>
+ 
 
 
   <ion-item style="background: transparent">
@@ -32,7 +36,7 @@
     [(ngModel)]="Booking.checkout" ngDefaultControl></ion-datetime>
   </ion-item>
 
-  <br>
+  
 
   <ion-item  style="background: transparent">
     <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px"  > Adults</ion-label>
@@ -45,7 +49,7 @@
       <ion-option>6</ion-option>
     </ion-select>
   </ion-item>
-  <br>
+
 
 
   <ion-item style="background: transparent">
@@ -61,7 +65,7 @@
     </ion-select>
   </ion-item>
 
-  <br>
+ 
 
   <ion-item style="background: transparent">
     <ion-label floating style="color: white; font-size: 5vw; font-weight: 500; font-family: serif; letter-spacing: 1.3px">Meal type</ion-label>
@@ -75,7 +79,7 @@
 
 <div class="btn">
   <button id="next" (click)="createBooking()" ion-button clear  large
-    style="color: #fff; width: 100%; letter-spacing: 3px; background:rgba(167, 122, 37, 1); font-size:4vw; font-family: serif;">Continue</button>
+    style="color: #fff; width: 100%; letter-spacing: 3px; background:rgba(167, 122, 37, 1); font-size:3.5vw; font-family: serif;">Continue</button>
  <!--  <button id="skip" (click)="createBooking()" ion-button clear large
     style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 4vw;font-family: serif;" >Cancel
   </button> -->
