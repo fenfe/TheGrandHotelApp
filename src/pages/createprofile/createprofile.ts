@@ -6,6 +6,8 @@ import 'firebase/auth';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
 import { UserProfileProvider } from '../../providers/user-profile/user-profile';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 /**
  * Generated class for the CreateprofilePage page.
  *
@@ -20,6 +22,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class CreateprofilePage {
   user
+  //firstName: AbstractControl;
+  profileForm : FormGroup;
   public userProfile: any;
   db = firebase.firestore();
   storage = firebase.storage().ref();
@@ -33,14 +37,26 @@ export class CreateprofilePage {
     Dob: null
    
   } as Profile
-  constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider, private profileService : UserProfileProvider,public toast: ToastController, public loadingCtrl: LoadingController,  public loading: LoadingController, public camera: Camera) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider, private profileService : UserProfileProvider,public toast: ToastController, public loadingCtrl: LoadingController,  public loading: LoadingController, public camera: Camera,   private formBuilder: FormBuilder, private FormsModule:FormsModule, private reactiveformsmodule: ReactiveFormsModule) {
   this.uid = firebase.auth().currentUser.uid;
       this.profileService.setUser(this.uid)
       this.authService.setUser(this.uid)
-
+  //form group validators
+this.profileForm = this.formBuilder.group({
+  firstName: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
+  phone: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
+  Dob: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
+  gender: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)]))
+});
+    
   }
-
+  
+   get FirstName(){
+  return this.profileForm.get('firstName');
+  }
   ionViewDidLoad() {
+
+
     let loader = this.loadingCtrl.create({
       content: "Getting you ready"
     })
@@ -126,7 +142,43 @@ export class CreateprofilePage {
 
 
   }
-
+  validation_messages = {
+    'firstName': [
+      { type: 'required', message: 'firstname is required.' },
+      { type: 'minlength', message: 'Username must be at least 4 characters long.' },
+      { type: 'maxlength', message: 'Username cannot be more than 25 characters long.' },
+      { type: 'pattern', message: 'Your name must contain only numbers and letters.' },
+      { type: 'validUsername', message: 'Your username has already been taken.' }
+    ],
+    'name': [
+      { type: 'required', message: 'Name is required.' }
+    ],
+    'lastname': [
+      { type: 'required', message: 'Last name is required.' }
+    ],
+    'email': [
+      { type: 'required', message: 'Email is required.' },
+      { type: 'pattern', message: 'Enter a valid email.' }
+    ],
+    'phone': [
+      { type: 'required', message: 'Phone is required.' },
+      { type: 'validCountryPhone', message: 'Phone incorrect for the country selected' }
+    ],
+    'password': [
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be at least 5 characters long.' },
+      { type: 'pattern', message: 'Your password must contain at least one uppercase, one lowercase, and one number.' }
+    ],
+    'confirm_password': [
+      { type: 'required', message: 'Confirm password is required' }
+    ],
+    'matching_passwords': [
+      { type: 'areEqual', message: 'Password mismatch' }
+    ],
+    'terms': [
+      { type: 'pattern', message: 'You must accept terms and conditions.' }
+    ],
+  };
 
 //gohome
 

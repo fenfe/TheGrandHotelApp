@@ -18,6 +18,7 @@ import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
 import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 import { UserProfileProvider } from '../providers/user-profile/user-profile';
 import { UserinfoPage } from '../pages/userinfo/userinfo';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { UserinfoPage } from '../pages/userinfo/userinfo';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ReactiveFormsModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
