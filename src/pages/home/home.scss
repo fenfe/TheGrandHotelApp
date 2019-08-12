@@ -4,18 +4,64 @@ ion-content {
         width: 100%;
         height: 100%;
 
-        .text {
-            border: 1px solid green;
-            width: 100%;
-            height: 25%;
+        .logo {
+            border: 1px solid white;
+            width: 80%;
+            height: 20%;
             position: absolute;
-            top: 10%;
-            h3 {
-                color: white;
-                letter-spacing: 2px;
-            }
+            left: 5%;
+            top: 0;
+        }
+        #wave {
+           // border: 1px solid rgb(255, 255, 255);
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom:0;
+           z-index: -5;
+           img {
+               width: 100%;
+               height: 100%;
+           }
+        }
+        .text {
+            border: 2px solid rgb(255, 255, 255);
+            width: 80%;
+            height: 30%;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+
+           
 
         }
+
+        
+        .texty {
+            border: 2px solid white;
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            width: 75%;
+            height: 25%;
+
+            .textyy {
+                background:linear-gradient(to bottom, #0002107e 60%,  #1c465c67 100%);
+               // border: 1px solid red;
+                width: 86%;
+                height: 80%;
+                position: absolute;
+               top:30;
+
+                 p {
+                color: white;
+                letter-spacing: 2px;
+                font-size: 90%;
+                font-weight: bold;
+            }
+            }
+        }
+
         .btn {
             width: 100%;
             border: 1px solid red;
@@ -71,40 +117,15 @@ ion-content {
             border: 1px solid white;
             width: 90%;
             height: 70%;
-            position: absolute;
+            position: relative;
             top: 20%;
             left: 20%;
+
+           
         }
 
     }
-    #wave {
-        position: relative;
-        height: 70px;
-        width: 600px;
-        background: #e0efe3;
-      }
-      #wave:before {
-        content: "";
-        display: block;
-        position: absolute;
-        border-radius: 100% 50%;
-        width: 340px;
-        height: 80px;
-        background-color: white;
-        right: -5px;
-        top: 40px;
-      }
-      #wave:after {
-        content: "";
-        display: block;
-        position: absolute;
-        border-radius: 100% 50%;
-        width: 300px;
-        height: 70px;
-        background-color: #e0efe3;
-        left: 0;
-        top: 27px;
-      }
+  
 
     } 
     
