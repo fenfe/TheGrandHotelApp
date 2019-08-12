@@ -1,8 +1,10 @@
+import { BookmodalPage } from './../bookmodal/bookmodal';
 import { Component, ViewChild } from '@angular/core';
 import {  IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { RegistermodalPage } from '../registermodal/registermodal';
 import {LoginmodalPage} from '../loginmodal/loginmodal';
+
 
 @Component({
   selector: 'page-home',
@@ -37,7 +39,9 @@ next(){
     let registerModal = this.modalCtrl.create(RegistermodalPage);
     registerModal.present();
   }
-
+nextgo(){
+  this.navCtrl.push(BookmodalPage);
+}
   
 
 }
