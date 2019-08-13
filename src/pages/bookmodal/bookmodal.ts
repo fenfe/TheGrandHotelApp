@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
+import { ConfirmationPage } from '../confirmation/confirmation';
 /**
  * Generated class for the BookmodalPage page.
  *
@@ -16,7 +17,11 @@ import { ProvidersUserProvider } from '../../providers/providers-user/providers-
   templateUrl: 'bookmodal.html',
 })
 export class BookmodalPage {
+  result           = '';
+  characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   db = firebase.firestore();
+  charactersLength;
+  
   // stores the room info
   room = {} as Room;
   // stores the form data
@@ -36,7 +41,7 @@ dateBooked : null
 
   userData;
   constructor(public navCtrl: NavController, public navParams: NavParams,private userProvider: ProvidersUserProvider,public loadCtrl: LoadingController,public toastCtrl: ToastController) {
-
+    this.charactersLength = this.characters.length;
   }
 
   ionViewDidLoad() {
@@ -50,9 +55,13 @@ dateBooked : null
 gopayform(){
   this.navCtrl.push(PaymentmodalPage);
 }
- getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+ getRandomInt() {
+  for( var i = 0; i < length; i++ ) {
+    this.result += this.characters.charAt(Math.floor(Math.random() * this.charactersLength));
+  }
+  return this.result;
 }
+
 createBooking() {
   if (
     
@@ -67,15 +76,16 @@ createBooking() {
     }).present();
   } else {
 
-    const start = new Date(this.Booking.checkin);
+    let start = new Date(this.Booking.checkin).valueOf();
     const end = new Date(this.Booking.checkout);​​
     const days = 1000 * 60 * 60 * 24;
     const month = 1000 * 60;
     const diff = end.valueOf() - start.valueOf();
     const Verr = Math.floor(diff / days);
-    if (Verr <= 0) { // CHECK IF THE DATE IS IN THE FUTURE
+    let today = new Date().valueOf();
+    if (Verr <= 0 || today > start) { // CHECK IF THE DATE IS IN THE FUTURE
       this.toastCtrl.create({
-        message: 'Pick a future date for check out',
+        message: 'Pick a future date for c',
         duration: 3000
       }).present();
     } else {
@@ -92,19 +102,19 @@ createBooking() {
             console.log( 'tHE BOOKING INFO: ' ,this.Booking);
            
             this.Booking.dateBooked = Date(); 
-
-              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser() + this.getRandomInt).set(this.Booking).then(res => {
-                this.toastCtrl.create({
-                  message: 'Success',
-                  duration: 3000
-                }).present();
-                this.navCtrl.push(PaymentmodalPage, {booking: this.Booking, room: this.navParams.data});
-              }).catch(err => {
-                this.toastCtrl.create({
-                  message: 'Failed',
-                  duration: 3000
-                }).present();
-              });
+            this.navCtrl.push(ConfirmationPage, {booking: this.Booking, room: this.navParams.data});
+            //  this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser() + " "+ this.getRandomInt() ).set(this.Booking).then(res => {
+            //     this.toastCtrl.create({
+            //       message: 'Success',
+            //       duration: 3000
+            //     }).present();
+              
+            //   }).catch(err => {
+            //     this.toastCtrl.create({
+            //       message: 'Failed',
+            //       duration: 3000
+            //     }).present();
+            //   });
         }
     }
   }
