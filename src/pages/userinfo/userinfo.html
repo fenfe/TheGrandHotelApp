@@ -11,7 +11,27 @@
 </ion-header> -->
 
 <ion-content>
+
 <div class="container">
+  <div class="name">
+    <h1>Kaboentle Mabiletsa</h1>
+  </div>
+
+  <div class="image">
+    <button ion-button color="danger" (click)="logout()">Logout</button>
+
+  </div>
+<div class="info">
+  <h4>Info</h4>
+   
+    <p>Date of birth:  </p>
+    <p>Email : </p>
+    <p>Contacts: </p>
+</div>
+
+<div class="bookings">
+  
+</div>
     <!-- <ion-icon name="close-circle"></ion-icon> -->
   <!-- <div class="pic">
     <img src="{{personDetails.image}}" >
@@ -40,7 +60,6 @@
         <p>Contacts: {{n.phone}} | {{n.email}}</p>
       </div>
 </div>
-<button ion-button color="danger" (click)="logout()">Logout</button>
 </div>
 
 </ion-content>

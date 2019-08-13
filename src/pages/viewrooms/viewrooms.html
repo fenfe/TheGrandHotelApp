@@ -11,8 +11,12 @@
 </ion-header>
 
 <ion-content>
+  <div class="header">
+
+  </div>
+  
 <div class="container">
-  <div class="card" *ngFor="let room of roomList" (click)="viewRoom(room)">
+ <!--  <div class="card" *ngFor="let room of roomList" (click)="viewRoom(room)">
   <div class="border" >
    <img src="{{room.image}}" alt="" class="src" width="100%" height=100%>
 </div>
@@ -31,7 +35,34 @@
    
 </div>
 
+  </div> -->
+<div class="card"  *ngFor="let room of roomList" (click)="viewRoom(room)">
+  <div class="border">
+    <div class="backg1"></div>
+    <div class="backg1b"></div>
+    <div class="backg2">
+        <h5>{{room.name}}</h5>
+      <p>{{room.price | currency:'&#82;'}}</p> 
+    </div>
+    <div class="backg2b">
+        <div class="stars">
+            <ion-icon name="star" style="color: goldenrod"></ion-icon>
+            <ion-icon name="star" style="color: goldenrod"></ion-icon>
+            <ion-icon name="star" style="color: goldenrod"></ion-icon>
+            <ion-icon name="star" style="color: goldenrod"></ion-icon>
+            <ion-icon name="star" style="color: goldenrod"></ion-icon>
+        </div>
+     
+    </div>
+    <div class="image" >
+        <img src="{{room.image}}" alt="" class="src" width="100%" height=100%>
+    </div>
+  <div class="border2"></div>
   </div>
+  
+</div>
+  <br> <br>
+
 </div>
 
 </ion-content>
