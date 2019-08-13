@@ -35,8 +35,13 @@
                     </div>
                    <ion-item style="background: transparent">
                      <ion-label style="color: white" ><ion-icon name="call" style="color: white"></ion-icon> Cellphone number</ion-label>
-                     <ion-input  type="tel" style="color:  white" formControlName="phone"  [(ngModel)]="profile.phone" ngDefaultControl></ion-input>
+                     <ion-input  type="tel" maxLength="10" style="color:  white" formControlName="phone"  [(ngModel)]="profile.phone" ngDefaultControl></ion-input>
                    </ion-item>
+                   <div class="error" *ngFor="let validate of validation_messages.phone">
+                    <div class="messages" *ngIf="profileForm.get('phone').hasError(validate.type) && (profileForm.get('phone').dirty || profileForm.get('phone').touched)">
+                      {{validate.message}}
+                    </div>
+                    </div>
                    <br>
                    <ion-item style="background: transparent">
                       <ion-label style="color:  white" ><ion-icon name="calendar" style="color: white"></ion-icon>  Date of birth</ion-label>

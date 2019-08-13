@@ -44,9 +44,9 @@ export class CreateprofilePage {
   //form group validators
 this.profileForm = this.formBuilder.group({
   firstName: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
-  phone: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
-  Dob: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
-  gender: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)]))
+  phone: new  FormControl('', Validators.compose([Validators.required, Validators.minLength(10)])),
+  Dob: new  FormControl('', Validators.required),
+  gender: ['']
 });
     
   }
@@ -144,40 +144,16 @@ this.profileForm = this.formBuilder.group({
   }
   validation_messages = {
     'firstName': [
-      { type: 'required', message: 'firstname is required.' },
-      { type: 'minlength', message: 'Username must be at least 4 characters long.' },
-      { type: 'maxlength', message: 'Username cannot be more than 25 characters long.' },
+      { type: 'required', message: 'Fullname is required.' },
+      { type: 'minlength', message: 'Fullname must be at least 4 characters long.' },
+      { type: 'maxlength', message: 'Fullname cannot be more than 25 characters long.' },
       { type: 'pattern', message: 'Your name must contain only numbers and letters.' },
       { type: 'validUsername', message: 'Your username has already been taken.' }
     ],
-    'name': [
-      { type: 'required', message: 'Name is required.' }
-    ],
-    'lastname': [
-      { type: 'required', message: 'Last name is required.' }
-    ],
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Enter a valid email.' }
-    ],
     'phone': [
-      { type: 'required', message: 'Phone is required.' },
-      { type: 'validCountryPhone', message: 'Phone incorrect for the country selected' }
+      { type: 'required', message: 'Cellnumber is required.' }
     ],
-    'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password must be at least 5 characters long.' },
-      { type: 'pattern', message: 'Your password must contain at least one uppercase, one lowercase, and one number.' }
-    ],
-    'confirm_password': [
-      { type: 'required', message: 'Confirm password is required' }
-    ],
-    'matching_passwords': [
-      { type: 'areEqual', message: 'Password mismatch' }
-    ],
-    'terms': [
-      { type: 'pattern', message: 'You must accept terms and conditions.' }
-    ],
+    
   };
 
 //gohome

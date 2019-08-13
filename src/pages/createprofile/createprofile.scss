@@ -6,6 +6,9 @@ ion-content {
       
 
     .container {
+        .messages{
+            color: red;
+        }
         .scroll-content{
             padding-bottom: 0 !important;
         }
