@@ -19,6 +19,7 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 import { UserProfileProvider } from '../providers/user-profile/user-profile';
 import { UserinfoPage } from '../pages/userinfo/userinfo';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConfirmationPage } from '../pages/confirmation/confirmation';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RoomdetailsPage,
     BookmodalPage,
     PaymentmodalPage,
-    UserinfoPage
+    UserinfoPage,
+    ConfirmationPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RoomdetailsPage,
     BookmodalPage,
     PaymentmodalPage,
-    UserinfoPage
+    UserinfoPage,
+    ConfirmationPage
   ],
   providers: [
     StatusBar,

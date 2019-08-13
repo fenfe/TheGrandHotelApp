@@ -28,45 +28,52 @@
           </div>
       
        <!-- inputs -->
+       <form action=""  [formGroup]="paymentForm">
        <div class="inputs">
-        <ion-item>
-          <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Card holder</ion-label>
-          <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="text"
-          [(ngModel)]="Payment.cardHolderName" ngDefaultControl></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Card number</ion-label>
-            <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="number"
-            [(ngModel)]="Payment.cardnumber" ></ion-input>
-          </ion-item>
-
-      
-        <ion-item>
-          <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">CVV</ion-label>
-          <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="number"
-          [(ngModel)]="Payment.cvv" ></ion-input>
-        </ion-item>
-
-      
-        <ion-item>
-            <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Expiration date</ion-label>
-            <ion-input type="date" displayFormat="YYYY" style="color: goldenrod; border-bottom: 1px solid black" 
-            [(ngModel)]="Payment.expiration"></ion-input>
-          </ion-item>
-        
+          <ion-item>
+              <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Card holder</ion-label>
+              <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="text"
+              [(ngModel)]="Payment.cardHolderName" formControlName="cardHolder" ngDefaultControl></ion-input>
+            </ion-item>
+            <div class="error" *ngFor="let validate of validation_messages.cardHolder">
+              <div class="messages" *ngIf="paymentForm.get('cardHolder').hasError(validate.type) && (paymentForm.get('cardHolder').dirty || paymentForm.get('cardHolder').touched)">
+                {{validate.message}}
+              </div>
+              </div>
+            <ion-item>
+                <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Card number</ion-label>
+                <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="tel" maxLength="16"
+                [(ngModel)]="Payment.cardnumber" formControlName="cardNumber" ></ion-input>
+              </ion-item>
+              <div class="error" *ngFor="let validate of validation_messages.cardNumber">
+                <div class="messages" *ngIf="paymentForm.get('cardNumber').hasError(validate.type) && (paymentForm.get('cardNumber').dirty || paymentForm.get('cardNumber').touched)">
+                  {{validate.message}}
+                </div>
+                </div>
+          
+            <ion-item>
+              <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">CVV</ion-label>
+              <ion-input style="color: goldenrod; border-bottom: 1px solid black" type="tel" maxLength="4"
+              [(ngModel)]="Payment.cvv" formControlName="cvv" ></ion-input>
+            </ion-item>
+            <div class="error" *ngFor="let validate of validation_messages.cvv">
+              <div class="messages" *ngIf="paymentForm.get('cvv').hasError(validate.type) && (paymentForm.get('cvv').dirty || paymentForm.get('cvv').touched)">
+                {{validate.message}}
+              </div>
+              </div>
+          
+            <ion-item>
+                <ion-label floating style="color: rgb(3, 18, 68); font-size: 4vw; font-weight: 500">Expiration date</ion-label>
+                <ion-datetime  max="2030-12-31" min="2019-09-13" displayFormat="MM, YYYY" pickerFormat="MM YYYY" style="color: goldenrod; border-bottom: 1px solid black" 
+                [(ngModel)]="Payment.expiration"  formControlName="expiration"></ion-datetime>
+              </ion-item>
       </div>
 
        <div class="btn">
-      <!--   <button id="next" (click)="''" ion-button clear  large
-          style="color: #fff; width: 48%; letter-spacing: 3px; background:rgb(53, 52, 52)  ; font-size: 80%; padding: 5%; font-family:Georgia, 'Times New Roman', Times, serif;">Cancel</button>
-         --><!-- <button id="skip" (click)="gopayform()" ion-button clear large
-          style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 5vw; font-family:Georgia, 'Times New Roman', Times, serif;">Pay Now
-        </button> -->
-        <button id="skip" (click)="gopayform()" ion-button clear large style="color: #fff; width:100%; letter-spacing: 3px;font-size:5vw; background: rgba(167, 122, 37, 1); font-family:Georgia, 'Times New Roman', Times, serif;">Pay </button>
+        <button id="skip" type="submit" (click)="gopayform()"  [disabled]="!paymentForm.valid" ion-button clear large style="color: #fff; width:100%; letter-spacing: 3px;font-size:5vw; background: rgba(167, 122, 37, 1); font-family:Georgia, 'Times New Roman', Times, serif;">Pay </button>
 
       </div> 
-    
+    </form>
       
      </div>
       

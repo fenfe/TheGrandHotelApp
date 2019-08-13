@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { LandhomePage } from '../landhome/landhome';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 /**
  * Generated class for the PaymentmodalPage page.
  *
@@ -16,7 +17,7 @@ import { LandhomePage } from '../landhome/landhome';
 })
 export class PaymentmodalPage {
   db = firebase.firestore();
-  
+  public paymentForm: FormGroup;
   room = {} as Room;
   booking = {} as Booking;
   Payment = {
@@ -25,8 +26,31 @@ export class PaymentmodalPage {
     cvv: null,
     expiration: null
   }
+  validation_messages = {
+    'cardHolder': [
+      { type: 'required', message: 'CardHolder name is required.' },
+      { type: 'minlength', message: 'CardHolder must be at least 4 characters long.' },
+      { type: 'pattern', message: 'Field cannot contain special characters or numbers ' },
+      { type: 'maxlength', message: 'CardHolder cannot be more than 25 characters long.' },
+    ],
+    'cardNumber': [
+      { type: 'required', message: 'Card number is required.' },
+      { type: 'minlength', message: 'Card number must be 16 characters long.' },
+    ],
+    'cvv':[
+      { type: 'required', message: 'Card number is required.' },
+      { type: 'minlength', message: 'cc number must be 4 characters long.' },
+    ]
+    
+  };
   public loading 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public toast: ToastController, private alertCtrl: AlertController,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toast: ToastController, private alertCtrl: AlertController,public loadingCtrl: LoadingController, public formBuilder: FormBuilder) {
+    this.paymentForm = this.formBuilder.group({
+      cardHolder: new  FormControl('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(30)])),
+      cardNumber: new  FormControl('', Validators.compose([Validators.required, Validators.minLength(16)])),
+      cvv: new  FormControl('', Validators.compose([Validators.required, Validators.minLength(4)])),
+      expiration: new FormControl([''])
+    });
   }
 
   ionViewDidLoad() {
