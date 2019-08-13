@@ -42,7 +42,11 @@ ion-content {
         }
         .bookings {
             border: 1px solid black;
-            width: 90%
+            width: 90%;
+            height: 20%;
+            position: relative;
+            top: -15%;
+            left: 10%;
         }
     }
   

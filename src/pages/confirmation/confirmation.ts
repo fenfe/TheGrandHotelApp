@@ -26,7 +26,7 @@ export class ConfirmationPage {
     public loadCtrl: LoadingController,
     public toastCtrl: ToastController) {
   }
-
+​
   ionViewDidLoad() {
     console.log(this.navParams);
     this.booking = this.navParams.data.booking;

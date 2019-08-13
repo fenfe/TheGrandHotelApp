@@ -10,7 +10,7 @@ ion-content {
        overflow: hidden;
            
        .icon {
-        border: 1px solid red;
+       // border: 1px solid red;
          width: 5%;
          height: 5%;
          transform: rotate(180deg);
@@ -35,10 +35,10 @@ ion-content {
 
             //new stuff
             .logo {
-               // background-image: url(../../assets/imgs/wave.svg);
+           
                 
                 display: flex;
-             //border: 1px solid rgb(17, 192, 11);
+            // border: 1px solid rgb(17, 192, 11);
                 width: 100%;
                 transform: rotate(180deg);
                 position: absolute;
@@ -46,7 +46,7 @@ ion-content {
               
     
                 .logo1 {
-               //  border: 1px solid rgb(8, 8, 8);
+                 //border: 1px solid rgb(8, 8, 8);
                     width: 30%;
                     height: 60%;
                     text-align: right;
@@ -54,7 +54,7 @@ ion-content {
     
                 }
                 .logo2 {
-                  //border: 1px solid rgb(235, 23, 146);
+                 // border: 1px solid rgb(235, 23, 146);
                     width: 70%;
                     height: 60%;
                     position: relative;
@@ -93,9 +93,9 @@ ion-content {
             width: 80%;
             height: 50%;
          //  border: 1px solid rgb(4, 139, 49);
-            position: relative;
+            position: absolute;
             left: 10%;
-            top: 15%;
+            top: 35%;
         }
 
         //buttons
@@ -104,9 +104,9 @@ ion-content {
           // border: 1px solid red;
             height: 10%;
             display: flex;
-            position: relative;
+            position: absolute;
             left: 10%;
-            top: 15%;
+            top: 88%;
         }
     }
 }

@@ -1,3 +1,4 @@
+import { ConfirmationPage } from './../pages/confirmation/confirmation';
 import { PaymentmodalPage } from './../pages/paymentmodal/paymentmodal';
 import { BookmodalPage } from './../pages/bookmodal/bookmodal';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,7 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 import { UserProfileProvider } from '../providers/user-profile/user-profile';
 import { UserinfoPage } from '../pages/userinfo/userinfo';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ConfirmationPage } from '../pages/confirmation/confirmation';
+
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
     BookmodalPage,
     PaymentmodalPage,
     UserinfoPage,
-    ConfirmationPage
+  ConfirmationPage
   ],
   imports: [
     BrowserModule,
@@ -57,6 +58,7 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
     PaymentmodalPage,
     UserinfoPage,
     ConfirmationPage
+  
   ],
   providers: [
     StatusBar,
