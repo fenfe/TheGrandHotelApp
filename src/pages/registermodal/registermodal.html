@@ -16,7 +16,7 @@
   
   <div class="inputs">
       <!--      <ion-list > -->
-        <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+        <form [formGroup]="signupForm">
           <ion-item style="background:rgba(25, 36, 51, 0.589)">
             <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
             <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" 
@@ -39,7 +39,7 @@
             <p style="color: red">Your password needs more than 6 characters.</p>
           </ion-item>
           <br>
-          <button id="skip" type="submit" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px;border-radius: 6px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;  box-shadow: 0 4px 8px 0 rgba(114, 110, 110, 0.329), 0 6px 20px 0 rgba(73, 68, 68, 0.445); ">Create my Account </button>
+          <button id="skip" (click)="signupUser(signupForm)" [disabled]="!signupForm.valid" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px;border-radius: 6px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;  box-shadow: 0 4px 8px 0 rgba(114, 110, 110, 0.329), 0 6px 20px 0 rgba(73, 68, 68, 0.445); ">Create my Account </button>
 
         </form>
              
@@ -48,7 +48,7 @@
 
         <!-- foot -->
         <div class="foot">
-          <p>Already have an account? <span><h6 (click)="loginModal()" >Login</h6></span></p>
+          <p>Already have an account? <span><h6 (click)="loginModal()"    >Login</h6></span></p>
         </div>
 
 </div>

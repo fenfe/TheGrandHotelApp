@@ -94,10 +94,7 @@ this.profileForm = this.formBuilder.group({
   
   {
     if(
-      !this.profile.FullName ||
-      !this.profile.gender ||
-      !this.profile.phone ||
-      !this.profile.Dob
+     !this.profileForm.valid
     ){
       this.toast.create({
         message: 'Please full all form fields.',

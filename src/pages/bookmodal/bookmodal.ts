@@ -50,6 +50,9 @@ dateBooked : null
 gopayform(){
   this.navCtrl.push(PaymentmodalPage);
 }
+ getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 createBooking() {
   if (
     
@@ -90,7 +93,7 @@ createBooking() {
            
             this.Booking.dateBooked = Date(); 
 
-              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser()).set(this.Booking).then(res => {
+              this.db.collection('Bookings').doc( this.Booking.roomname + this.userProvider.getUser() + this.getRandomInt).set(this.Booking).then(res => {
                 this.toastCtrl.create({
                   message: 'Success',
                   duration: 3000

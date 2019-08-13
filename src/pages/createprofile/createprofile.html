@@ -56,12 +56,14 @@
                         <ion-option value="Male">Male</ion-option>
                       </ion-select>
                     </ion-item> 
+
+                    <div class="btn">
+                      <button id="skip" (click)="createprofile(profileForm)"  type="submit" [disabled]="!profileForm.valid" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Profile </button>
+         
+                 </div>
                   </form>
               </div> 
-                <div class="btn">
-                   <button id="skip" (click)="createprofile()" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Create my Profile </button>
-      
-              </div>
+            
            
       </div>
 </ion-content>
