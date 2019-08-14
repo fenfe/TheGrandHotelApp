@@ -1,3 +1,4 @@
+import { ViewroomsPage } from './../viewrooms/viewrooms';
 import { Component } from '@angular/core';
 
 import {RegistermodalPage} from '../registermodal/registermodal';
@@ -38,7 +39,7 @@ export class LoginmodalPage {
     } else {
       this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password)
       .then( authData => {
-        this.navCtrl.setRoot(LandhomePage);
+        this.navCtrl.setRoot(ViewroomsPage);
       }, error => {
         this.loading.dismiss().then( () => {
           let alert = this.alertCtrl.create({

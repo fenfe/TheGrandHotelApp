@@ -1,6 +1,7 @@
+import { ViewroomsPage } from './../viewrooms/viewrooms';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
-import {LandhomePage} from '../landhome/landhome';
+
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
@@ -128,7 +129,7 @@ this.profileForm = this.formBuilder.group({
         this.profileService.updateName(this.profile.FullName,this.profile.phone, this.profile.Dob,this.profile.gender, downloadURL, this.uid );
        
         load.present().then(() =>{
-          this.navCtrl.setRoot(LandhomePage)
+          this.navCtrl.setRoot(ViewroomsPage)
         })
         load.dismiss();
       })

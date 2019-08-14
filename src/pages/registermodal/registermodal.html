@@ -18,7 +18,7 @@
       <!--      <ion-list > -->
         <form [formGroup]="signupForm">
           <ion-item style="background:rgba(25, 36, 51, 0.589)">
-            <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
+            <ion-label floating  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
             <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" 
             [class.invalid]="!signupForm.controls['email'].valid && signupForm.controls['email'].touched"></ion-input>
           </ion-item>
@@ -29,7 +29,7 @@
         </ion-item>
         <br>
           <ion-item style="background: rgba(25, 36, 51, 0.589); border-radius: 6px;">
-            <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="lock" style="color:white"></ion-icon>  Password</ion-label>
+            <ion-label floating style="color: white; font-weight: 700;font-family: serif; letter-spacing: 2px" ><ion-icon name="lock" style="color:white"></ion-icon>  Password</ion-label>
             <ion-input  type="password" style="color: white;border-bottom:transparent;font-weight: 400; letter-spacing: 1px" formControlName="password"
             [class.invalid]="!signupForm.controls['password'].valid && signupForm.controls['password'].touched"></ion-input>
           </ion-item>
