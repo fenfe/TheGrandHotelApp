@@ -144,7 +144,7 @@ this.profileForm = this.formBuilder.group({
       { type: 'required', message: 'Fullname is required.' },
       { type: 'minlength', message: 'Fullname must be at least 4 characters long.' },
       { type: 'maxlength', message: 'Fullname cannot be more than 25 characters long.' },
-      { type: 'pattern', message: 'Your name must contain only numbers and letters.' },
+      { type: 'pattern', message: 'Your name must contain only numbers and special characters.' },
       { type: 'validUsername', message: 'Your username has already been taken.' }
     ],
     'phone': [
