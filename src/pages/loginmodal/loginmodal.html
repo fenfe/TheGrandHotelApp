@@ -19,7 +19,7 @@
             <!--      <ion-list > -->
              
                    <ion-item style="background: transparent">
-                     <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 1.3px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
+                     <ion-label floating style="color: white; font-weight: 700;font-family: serif; letter-spacing: 1.3px" ><ion-icon name="mail" style="color: white"></ion-icon>  Email</ion-label>
                      <ion-input type="email" style="color: white;font-weight: 400; letter-spacing: 1px" formControlName="email" type="email"  [class.invalid]="!loginForm.controls['email'].valid &&
                      loginForm.controls['email'].touched"></ion-input>
                    </ion-item>
@@ -30,7 +30,7 @@
                 </ion-item>
             <br> <br>
                    <ion-item style="background: transparent">
-                     <ion-label  style="color: white; font-weight: 700;font-family: serif; letter-spacing: 1.3px" ><ion-icon name="lock" style="color: white"></ion-icon>  Password</ion-label>
+                     <ion-label floating style="color: white; font-weight: 700;font-family: serif; letter-spacing: 1.3px" ><ion-icon name="lock" style="color: white"></ion-icon>  Password</ion-label>
                      <ion-input  type="password" sstyle="color: white;font-weight: 400; letter-spacing: 1px" formControlName="password" type="password" 
                      [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched"></ion-input>
                    </ion-item>

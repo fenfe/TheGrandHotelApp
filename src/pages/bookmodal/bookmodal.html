@@ -9,7 +9,7 @@
 <ion-content>
   <div class="container" style="background-image: linear-gradient(to bottom, #000210a1 60%,  #1c465c67 100%),url(../../assets/imgs/chilling2.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;opacity: 4;">
 <div class="icon">
-    <ion-icon name="arrow-round-back" style="color: white; font-size: 8vw"></ion-icon>
+    <ion-icon (click)="gopayform()" name="arrow-round-back" style="color: white; font-size: 8vw"></ion-icon>
 </div>
     <div class="logo">
         <div class="logo1">
@@ -83,7 +83,7 @@
  <!--  <button id="skip" (click)="createBooking()" ion-button clear large
     style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 4vw;font-family: serif;" >Cancel
   </button> -->
-  <button  ion-button (click)="gopayform()">next</button>
+  <button  ion-button (click)="gopayform2()">next</button> 
 </div> 
 
 </div>

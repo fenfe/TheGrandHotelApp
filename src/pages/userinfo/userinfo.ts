@@ -1,3 +1,4 @@
+import { ViewroomsPage } from './../viewrooms/viewrooms';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import * as firebase from 'firebase/app';
@@ -79,6 +80,9 @@ export class UserinfoPage {
     
       console.log("Query Results: ", err);
     })
+  }
+  gohome(){
+    this.navCtrl.push(ViewroomsPage);
   }
   async updateName(): Promise<void> {
     const alert = await this.alertCtrl.create({

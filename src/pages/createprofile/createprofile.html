@@ -16,7 +16,7 @@
         <div class="inputs">
             <!--      <ion-list > -->
               <div class="propic">
-                <div class="profile-image">
+                <div class="profile-image" style="background-color: rgba(167, 122, 37, 1)">
                     <ion-icon name="person" style="color: white; font-size: 30vw;"></ion-icon>
          <button id="camera" style="font-size: 7vw; color: white;background: transparent" (click)="selectImage(0)"><ion-icon name="camera"></ion-icon></button>
 
@@ -25,7 +25,7 @@
               </div>
               <form action=""  [formGroup]="profileForm">
                    <ion-item style="background: transparent">
-                     <ion-label  style="color:  white" ><ion-icon name="person" style="color: white"></ion-icon>  Fullname</ion-label>
+                     <ion-label floating style="color:  white" ><ion-icon name="person" style="color: white"></ion-icon>  Fullname</ion-label>
                      <ion-input type="text" style="color:  white"  formControlName="firstName"   [(ngModel)]="profile.FullName" ngDefaultControl></ion-input>
                    </ion-item>
                    <div class="error" *ngFor="let validate of validation_messages.firstName">
@@ -34,7 +34,7 @@
                     </div>
                     </div>
                    <ion-item style="background: transparent">
-                     <ion-label style="color: white" ><ion-icon name="call" style="color: white"></ion-icon> Cellphone number</ion-label>
+                     <ion-label floating style="color: white" ><ion-icon name="call" style="color: white"></ion-icon> Cellphone number</ion-label>
                      <ion-input  type="tel" maxLength="10" style="color:  white" formControlName="phone"  [(ngModel)]="profile.phone" ngDefaultControl></ion-input>
                    </ion-item>
                    <div class="error" *ngFor="let validate of validation_messages.phone">
@@ -44,13 +44,13 @@
                     </div>
                    <br>
                    <ion-item style="background: transparent">
-                      <ion-label style="color:  white" ><ion-icon name="calendar" style="color: white"></ion-icon>  Date of birth</ion-label>
+                      <ion-label floating style="color:  white" ><ion-icon name="calendar" style="color: white"></ion-icon>  Date of birth</ion-label>
                       <ion-input  type="date" style="color:  white"  formControlName="Dob" [(ngModel)]="profile.Dob" ngDefaultControl ></ion-input>
                     </ion-item>
                     <br>
                     
                      <ion-item style="background: transparent">
-                      <ion-label style="color:  white">Gender</ion-label>
+                      <ion-label floating style="color:  white">Gender</ion-label>
                       <ion-select  formControlName="gender"    [(ngModel)]="profile.gender" ngDefaultControl>
                         <ion-option value="Female">Female</ion-option>
                         <ion-option value="Male">Male</ion-option>
