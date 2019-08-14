@@ -11,14 +11,16 @@
 </ion-header> -->
 
 <ion-content>
-
+<div class="close">
+    <ion-icon name="close" style="font-size: 6vw; color: rgb(119, 6, 6)"></ion-icon>
+</div>
 <div class="container">
   <div class="name">
     <h1>Kaboentle Mabiletsa</h1>
   </div>
 
   <div class="image">
-    <button ion-button color="danger" (click)="logout()">Logout</button>
+   <!--  <button ion-button color="danger" (click)="logout()">Logout</button> -->
 
   </div>
 <div class="info">
@@ -27,9 +29,28 @@
     <p>Date of birth:  </p>
     <p>Email : </p>
     <p>Contacts: </p>
+      <h3>Reservation history</h3>
 </div>
 
+
 <div class="bookings">
+ 
+<div class="card" *ngFor="let n of bookings">
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="img/avatar-finn.png">
+      </ion-avatar>
+      <h6>Room name: </h6>
+     <h6>Check-in       :    {{n.checkin | date}}</h6>
+     <h6>Check-out:    {{n.checkout | date}}</h6>
+     <h6>Guest:    5    </h6>
+     <h6>Total Amount: </h6>
+    </ion-item>
+
+    
+  </ion-list>
+</div>
   
 </div>
     <!-- <ion-icon name="close-circle"></ion-icon> -->
@@ -60,6 +81,11 @@
         <p>Contacts: {{n.phone}} | {{n.email}}</p>
       </div>
 </div>
+</div>
+<div class="btn">
+    <button id="skip" ion-fab mini style="background: rgb(4, 18, 95)"><ion-icon name="create"></ion-icon></button>
+  <button  (click)="logout()"  ion-button clear  large style="color: #fff; width: 80%; letter-spacing: 3px;border-radius: 4px; background: rgba(167, 122, 37, 1); font-size: 90%; padding: 3%; font-family:Georgia, 'Times New Roman', Times, serif;  box-shadow: 0 4px 8px 0 rgba(114, 110, 110, 0.329), 0 6px 20px 0 rgba(73, 68, 68, 0.445); ">Logout </button>
+
 </div>
 
 </ion-content>

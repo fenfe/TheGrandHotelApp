@@ -53,7 +53,7 @@ dateBooked : null
     this.getProfile()
   }
 gopayform(){
-  this.navCtrl.push(PaymentmodalPage);
+  this.navCtrl.push(ConfirmationPage);
 }
  getRandomInt() {
   for( var i = 0; i < length; i++ ) {
