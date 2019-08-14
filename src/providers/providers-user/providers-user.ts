@@ -68,23 +68,5 @@ export class ProvidersUserProvider {
     this.user = val;
     console.log('User form Provider', this.user);
   }
-  uploadProfile(val){
-    const profileImages = this.storage.child('User Name.jpg');
-    const upload = profileImages.putString(val, 'data_url');
-  }
-  createProfile(val){
-    const profile = this.db.collection('userProfile').add(val);
-
-    profile.then( res => {
-      this.toastCtrl.create({
-        message: 'Profile Created',
-        duration: 2000
-      }).present();
-    }, err => {
-      this.toastCtrl.create({
-        message: 'Profile creation Error. Try again later',
-        duration: 2000
-      }).present();
-    })
-  }
+  
 }
