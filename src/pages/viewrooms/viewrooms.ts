@@ -1,3 +1,4 @@
+import { UserinfoPage } from './../userinfo/userinfo';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import * as firebase from 'firebase/app';
@@ -70,6 +71,9 @@ personDetails = {
         console.log('No data');
         
       })
+      }
+      viewprofile(){
+        this.navCtrl.push(UserinfoPage);
       }
       viewRoom(value){
         this.navCtrl.push(RoomdetailsPage, value)

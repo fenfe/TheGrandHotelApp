@@ -1,3 +1,4 @@
+import { ViewroomsPage } from './../viewrooms/viewrooms';
 import { PaymentmodalPage } from './../paymentmodal/paymentmodal';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
@@ -53,6 +54,9 @@ dateBooked : null
     this.getProfile()
   }
 gopayform(){
+  this.navCtrl.push(ViewroomsPage);
+}
+gopayform2(){
   this.navCtrl.push(ConfirmationPage);
 }
  getRandomInt() {

@@ -23,19 +23,24 @@ ion-content {
            
                 
                     display: flex;
-              //  border: 1px solid rgb(17, 192, 11);
+               // border: 1px solid rgb(17, 192, 11);
                     width: 80%;
             
-                    position: absolute;
+                    position: relative;
                     top: 0%;
                   
         
                     .logo1 {
-                     //border: 1px solid rgb(8, 8, 8);
+                    // border: 1px solid rgb(8, 8, 8);
                         width: 30%;
-                        height: 60%;
+                        height: 100%;
                         text-align: right;
-               
+                      img {
+                        
+                    position: relative;
+                    top: 6%;
+                    left: -10%;
+                      }
         
                     }
                     .logo2 {
@@ -48,15 +53,20 @@ ion-content {
                     
                         h3 {//border: 1px solid red;
                             font-family: serif;
-                            color: rgb(3, 18, 68);
+                            color: white;
                                text-align: left;
                                letter-spacing: 2px;
                         }
                     }
                 }
-              //
-              .profile-image {
-                
+              // 
+              .propic {
+                position: absolute;
+                left: 80%;
+                top: 0%;
+                object-fit: cover;
+                      .profile-image {
+                object-fit: cover;
                 height: 10vh;
                 width:  10vh;
                 border-radius: 50%;
@@ -64,12 +74,14 @@ ion-content {
                 object-position: center;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-                position: relative;
+               /*  position: relative;
                 left: 80%;
-                top: 15%;
+                top: 0%; */
 
              
         }
+              }
+        
           }
           .text {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -103,8 +115,8 @@ ion-content {
                   height: 40%;
                 }
                 .backg1b {
-                  border-left: 2px solid black;
-                    border-bottom: 2px solid black;
+                  border-left: 2px solid rgb(5, 13, 92);
+                    border-bottom: 2px solid rgb(5, 13, 92);
                     width: 35%;
                     height: 55%;
                     position: absolute;
@@ -140,8 +152,8 @@ ion-content {
                   }
                 }
                 .backg2b {
-                    border-top: 2px solid black;
-                    border-right: 2px solid black;
+                    border-top: 2px solid rgb(5, 13, 92);
+                    border-right: 2px solid rgb(5, 13, 92);
                     width: 55%;
                     height: 55%;
                     position: absolute;
