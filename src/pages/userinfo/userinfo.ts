@@ -37,7 +37,7 @@ export class UserinfoPage {
     private profileService : UserProfileProvider,
     public loadingCtrl: LoadingController ) {
   }
-
+  
   ionViewDidLoad() {
     this.retrieveBooking();
     this.authService.getUser();

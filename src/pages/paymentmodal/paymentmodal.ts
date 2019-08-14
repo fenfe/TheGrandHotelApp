@@ -26,6 +26,10 @@ export class PaymentmodalPage {
     cvv: null,
     expiration: null
   }
+  result           = '';
+  characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  charactersLength;
+  check
   validation_messages = {
     'cardHolder': [
       { type: 'required', message: 'CardHolder name is required.' },
@@ -59,11 +63,20 @@ export class PaymentmodalPage {
     console.log('booking info', this.booking)
     this.room = this.navParams.data.room;
     console.log('room info', this.room)
+this.check = this.navParams.data.storeVal
+console.log('value stored', this.check);
+
   }
 
   //temporary seko remove it if i forget
   gopay(){
     this.navCtrl.push(PaymentmodalPage)
+  }
+  getRandomInt() {
+    for( var i = 0; i < length; i++ ) {
+      this.result += this.characters.charAt(Math.floor(Math.random() * this.charactersLength));
+    }
+    return this.result;
   }
   gopayform(){
     if (

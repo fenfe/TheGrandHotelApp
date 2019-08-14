@@ -6,6 +6,7 @@ import firebase from 'firebase';
 import { FIREBASE_CONFIG } from './credentials';
 import { HomePage } from '../pages/home/home';
 import { LandhomePage } from '../pages/landhome/landhome';
+import { ViewroomsPage } from '../pages/viewrooms/viewrooms';
 @Component({
   templateUrl: 'app.html'
 })
@@ -18,7 +19,7 @@ export class MyApp {
         this.rootPage = HomePage;
         unsubscribe();
       } else {
-        this.rootPage = LandhomePage;
+        this.rootPage = ViewroomsPage;
         unsubscribe();
       }
     });

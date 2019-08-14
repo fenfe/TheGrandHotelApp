@@ -11,10 +11,14 @@
   
   <ion-content >
     <div class="container" style="background-image: linear-gradient(to bottom, #000210a1 60%,  #1c465c67 100%),url(../../assets/imgs/chilling2.jpg);background-size: cover;background-position: center center;background-repeat: no-repeat;opacity: 4;">
+      <div class="icon">
+        <ion-icon (click)="gopayform()" name="arrow-round-back" style="color: white; font-size: 8vw"></ion-icon>
+    </div>
       <div class="logo">
           <div class="logo1">
             <img src="../../assets/imgs/compass.png" width="70%" >
           </div>
+          
           <div class="logo2">
              <h3>The Grand Hotel</h3>
           </div>
@@ -32,12 +36,12 @@
       </div>
        <div class="info">
          <h4>Your Reservation</h4>
-         <p> You'l be checking in on  {{booking.checkin}}     :<span class="spanny"> <!-- {{booking.checkin}} --></span>  </p>
-         <p>You'l be checking out on      :<span class="spanny"> <!-- {{booking.checkout}} --></span> {{booking.checkout}}</p>
-         <p>Overall number of days   :<span class="spanny"><!--  {{booking.checkin}} --></span> {{booking.days}}</p>
-         <p>Overall number of guests   :<span class="spanny"><!--  {{booking.checkin}} --></span> {{booking.adults}}</p>
-         <p>The room name you booked      :<span class="spanny"> <!-- {{booking.roomname}} --></span> {{booking.roomname}}</p>
-         <p>The total Amount you will pay :<span class="spanny"> <!-- {{booking.checkin}} --></span> {{booking.Totalprice}}</p>
+         <p> You'll be checking in on:<span class="spanny"> {{booking.checkin}}</span>  </p>
+         <p>You'll be checking out on:<span class="spanny"> {{booking.checkout}}</span> </p>
+         <p>Overall number of days   :<span class="spanny"> {{booking.days}}</span></p>
+         <p>Overall number of guests :<span class="spanny">{{booking.adults}}</span> </p>
+         <p>The room name you booked :<span class="spanny"> {{booking.roomname}}</span> </p>
+         <p>The total Amount you will pay :<span class="spanny"> {{booking.Totalprice}}</span> </p>
        </div>
 <div class="btn">
     <button id="next" (click)=" confirm()" ion-button clear  large

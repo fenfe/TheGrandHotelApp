@@ -37,7 +37,8 @@ export class BookmodalPage {
     days: 0, 
     roomname: null,
   email: null,
-dateBooked : null
+dateBooked : null,
+imageRoom : null
   };
 
   userData;
@@ -47,7 +48,8 @@ dateBooked : null
 
   ionViewDidLoad() {
     this.room = this.navParams.data;
-    this.Booking.roomname = this.room.name;
+    this.Booking.roomname = this.room.name; 
+    this.Booking.imageRoom = this.room.image;
   this.Booking.uid = this.userProvider.getUser();
     //console.log(this.navParams);
     console.log('User id',this.userProvider.getUser());

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, ToastController
 import { Booking, PaymentmodalPage } from '../paymentmodal/paymentmodal';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
 import * as firebase from 'firebase';
+import { BookmodalPage } from '../bookmodal/bookmodal';
 /**
  * Generated class for the ConfirmationPage page.
  *
@@ -21,6 +22,7 @@ export class ConfirmationPage {
   charactersLength;
   booking = {} as Booking;
   db = firebase.firestore();
+  storeVal 
   constructor(public navCtrl: NavController, public navParams: NavParams
     ,private userProvider: ProvidersUserProvider,
     public loadCtrl: LoadingController,
@@ -34,7 +36,8 @@ export class ConfirmationPage {
     this.booking.uid = this.userProvider.getUser();
     //console.log(this.navParams);
     console.log('User id',this.userProvider.getUser());
-    this.getProfile()
+    this.getProfile();
+   
   }
   getRandomInt() {
     for( var i = 0; i < length; i++ ) {
@@ -87,6 +90,9 @@ export class ConfirmationPage {
      
       load.dismiss();
     })
+  }
+  gopayform(){
+    this.navCtrl.setRoot(BookmodalPage)
   }
 }
 export interface Booking  {
