@@ -16,19 +16,19 @@
 </div>
 <div class="container">
   <div class="name">
-    <h1>Kaboentle Mabiletsa  {{personDetails.fullName}}</h1>
+    <h1>{{personDetails.fullName}}</h1>
   </div>
 
   <div class="image">
    <!--  <button ion-button color="danger" (click)="logout()">Logout</button> -->
-
+   <img src="{{personDetails.image}}" >
   </div>
 <div class="info">
   <h4>Info</h4>
    
-    <p>Date of birth:  </p>
-    <p>Email : </p>
-    <p>Contacts: </p>
+    <p>Date of birth: {{personDetails.Dob}}  </p>
+    <p>Email : {{personDetails.email}} </p>
+    <p>Contacts: {{personDetails.cellNo}} </p>
       <h3>Reservation history</h3>
 </div>
 
@@ -41,11 +41,11 @@
       <ion-avatar item-start>
         <img src="img/avatar-finn.png">
       </ion-avatar>
-      <h6>Room name: </h6>
+      <h6>Room name: {{n.roomname}}</h6>
      <h6>Check-in       :    {{n.checkin | date}}</h6>
      <h6>Check-out:    {{n.checkout | date}}</h6>
-     <h6>Guest:    5    </h6>
-     <h6>Total Amount: </h6>
+     <h6>Guest:    {{n.adults}}   </h6>
+     <h6>Total Amount: {{n.Totalprice}}</h6>
     </ion-item>
 
     
@@ -69,18 +69,7 @@
     </div>
     
   </div> -->
-  
-  <div >
-    <div class="card" *ngFor="let n of bookings">
-        <h1>{{n.name}} {{n.surname}} <div class="fbutton">
-           
-        </div> </h1>
-        <p> Booked a {{n.roomname}} </p>
-        <p> Check In Date: {{n.checkin | date}} </p>
-        <p> Checkout Date: {{n.checkout | date}} </p>
-        <p>Contacts: {{n.phone}} | {{n.email}}</p>
-      </div>
-</div>
+
 </div>
 <div class="btn">
     <button id="skip" ion-fab mini style="background: rgb(4, 18, 95)"><ion-icon name="create"></ion-icon></button>

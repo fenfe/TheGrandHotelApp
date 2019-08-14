@@ -27,20 +27,20 @@
           <ion-item>Blade Runner</ion-item> -->
          <!--  <button (click)="confirm()"> confirm </button> -->
       <div class="header3">
-          <h3>428 BERNADO AVE</h3>
-      <h3>SUNNYVALE, CA 94D86</h3>
+          <h3>{{booking.roomname}}</h3>
+      <h3>SUNNYVALE, CA 94D8</h3>
       </div>
        <div class="info">
          <h4>Your Reservation</h4>
-         <p> You'l be checking in on      :<span class="spanny"> <!-- {{booking.checkin}} --></span> </p>
-         <p>You'l be checking out on      :<span class="spanny"> <!-- {{booking.checkout}} --></span></p>
-         <p>Overall number of days   :<span class="spanny"><!--  {{booking.checkin}} --></span></p>
-         <p>Overall number of guests   :<span class="spanny"><!--  {{booking.checkin}} --></span></p>
-         <p>The room name you booked      :<span class="spanny"> <!-- {{booking.roomname}} --></span></p>
-         <p>The total Amount you will pay :<span class="spanny"> <!-- {{booking.checkin}} --></span></p>
+         <p> You'l be checking in on  {{booking.checkin}}     :<span class="spanny"> <!-- {{booking.checkin}} --></span>  </p>
+         <p>You'l be checking out on      :<span class="spanny"> <!-- {{booking.checkout}} --></span> {{booking.checkout}}</p>
+         <p>Overall number of days   :<span class="spanny"><!--  {{booking.checkin}} --></span> {{booking.days}}</p>
+         <p>Overall number of guests   :<span class="spanny"><!--  {{booking.checkin}} --></span> {{booking.adults}}</p>
+         <p>The room name you booked      :<span class="spanny"> <!-- {{booking.roomname}} --></span> {{booking.roomname}}</p>
+         <p>The total Amount you will pay :<span class="spanny"> <!-- {{booking.checkin}} --></span> {{booking.Totalprice}}</p>
        </div>
 <div class="btn">
-    <button id="next" (click)="''" ion-button clear  large
+    <button id="next" (click)=" confirm()" ion-button clear  large
     style="color: #fff; width: 100%; letter-spacing: 3px; background:rgba(167, 122, 37, 1); font-size:3.5vw; font-family: serif;">Confirm Booking</button>
  
 </div>
