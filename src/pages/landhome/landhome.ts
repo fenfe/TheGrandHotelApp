@@ -32,15 +32,17 @@ personDetails = {
 };
   constructor(public navCtrl: NavController, public navParams: NavParams, private authService : ProvidersUserProvider) {
 
-  
+    this.user = firebase.auth().currentUser.uid
+    console.log('and then?',this.user)
+    this.authService.setUser(this.user);
 
   }
 
   ionViewDidLoad() {
-    this.user = firebase.auth().currentUser.uid
-  console.log(this.user)
-  this.authService.setUser(this.user);
-  
+  //   this.user = firebase.auth().currentUser.uid
+  // console.log('and then?',this.user)
+  // this.authService.setUser(this.user);
+ // console.log('lets see some data',this.authService.getUser())
     let users = this.db.collection('userProfile');
     let query = users.where("uid", "==", this.authService.getUser());
     query.get().then(querySnapshot => {
@@ -55,9 +57,9 @@ personDetails = {
       } else {
         console.log('No data');
       }
-      // dismiss the loading
+    
     }).catch(err => {
-      // catch any errors that occur with the query.
+      // catch any errors that occur w
       console.log("Query Results: ", err);
     })
   }
