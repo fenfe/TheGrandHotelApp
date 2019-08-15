@@ -20,6 +20,7 @@ import { RoomdetailsPage } from '../pages/roomdetails/roomdetails';
 import { UserProfileProvider } from '../providers/user-profile/user-profile';
 import { UserinfoPage } from '../pages/userinfo/userinfo';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 
 
 
@@ -36,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BookmodalPage,
     PaymentmodalPage,
     UserinfoPage,
-  ConfirmationPage
+  ConfirmationPage,
+  ResetpasswordPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BookmodalPage,
     PaymentmodalPage,
     UserinfoPage,
-    ConfirmationPage
+    ConfirmationPage,
+    ResetpasswordPage
   
   ],
   providers: [

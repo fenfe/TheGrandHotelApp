@@ -40,7 +40,7 @@ next(){
     registerModal.present();
   }
 nextgo(){
-  this.navCtrl.push(BookmodalPage);
+  this.navCtrl.setRoot(BookmodalPage);
 }
   
 

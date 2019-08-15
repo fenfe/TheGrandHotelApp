@@ -32,7 +32,7 @@ export class RoomdetailsPage {
     console.log('ionViewDidLoad RoomdetailsPage');
   }
 gopay(){
-  this.navCtrl.push(BookmodalPage,this.navParams.data)
+  this.navCtrl.setRoot(BookmodalPage,this.navParams.data)
 }
 
 

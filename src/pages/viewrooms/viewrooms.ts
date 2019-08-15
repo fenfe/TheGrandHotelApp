@@ -73,10 +73,10 @@ personDetails = {
       })
       }
       viewprofile(){
-        this.navCtrl.push(UserinfoPage);
+        this.navCtrl.setRoot(UserinfoPage);
       }
       viewRoom(value){
-        this.navCtrl.push(RoomdetailsPage, value)
+        this.navCtrl.setRoot(RoomdetailsPage, value)
       }
 
       //modal

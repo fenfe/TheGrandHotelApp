@@ -9,6 +9,7 @@ import { IonicPage, NavController, NavParams,LoadingController,
   Loading,
   AlertController ,ModalController} from 'ionic-angular';
 import { ProvidersUserProvider } from '../../providers/providers-user/providers-user';
+import { ResetpasswordPage } from '../resetpassword/resetpassword';
 /**
  * Generated class for the LoginmodalPage page.
  *
@@ -63,7 +64,9 @@ export class LoginmodalPage {
     }
   }
 
-
+  resetpassword(){
+    this.navCtrl.setRoot(ResetpasswordPage)
+  }
 //create register modal
 registerModal() {
   let registerModal = this.modalCtrl.create(RegistermodalPage);

@@ -217,7 +217,7 @@ export class UserinfoPage {
   logout(): void {
 
     this.authService.logoutUser().then(() => {
-      this.navCtrl.push(LoginmodalPage);
+      this.navCtrl.setRoot(LoginmodalPage);
      
     });
   }

@@ -41,7 +41,7 @@
                  </ion-item>
                    <br>
                    <button id="skip" (click)="loginUser(loginForm)"   [disabled]="!loginForm.valid" ion-button clear  large style="color: #fff; width: 100%; letter-spacing: 3px; background: rgba(167, 122, 37, 1); font-size: 100%; padding: 7%; font-family:Georgia, 'Times New Roman', Times, serif;">Login </button>
-                <p>Forgot Password ?</p>
+                <p (click)="resetpassword()">Forgot Password ? </p>
               </div>   
             </form>
 

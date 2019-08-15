@@ -70,7 +70,7 @@ console.log('value stored', this.check);
 
   //temporary seko remove it if i forget
   gopay(){
-    this.navCtrl.push(PaymentmodalPage)
+    this.navCtrl.setRoot(PaymentmodalPage)
   }
   getRandomInt() {
     for( var i = 0; i < length; i++ ) {
