@@ -13,8 +13,8 @@ page-loginmodal {
                 left: 10%;
                 top: 0;
                 width: 80%;
-                height: 40%;
-               //border: 1px solid yellow;
+                height: 35%;
+             //  border: 1px solid yellow;
                 h1 {//border: 1px solid green;
                     text-align: center;
                     color: white;
@@ -38,22 +38,30 @@ page-loginmodal {
             //inputs
             .inputs {
                 width: 80%;
-                height: 50%;
+                height: 45%;
                // border: 1px solid rgb(248, 248, 255); 
-                position: relative;
+                position: absolute;
                 left: 10%;
-                top: 5%;
-    
+                top: 35%;
+                p {margin: 0;
+                    color: white;
+                    font-family: serif;
+                   letter-spacing: 1px;
+               //  border: 1px solid red;
+                    position: relative;
+                    text-align: center;
+                   // top: 50%;
+                }//
                
             }
             
             .foot {
-                //border: 1px solid goldenrod;
+               // border: 1px solid goldenrod;
                 width: 80%;
-                height: 10%;
+                height: 20%;
                 position: relative;
                 left: 10%;
-                top: 10%;
+                top: 45%;
     
                 p {margin: 0;
                     color: white;
@@ -61,7 +69,7 @@ page-loginmodal {
                  //  border: 1px solid red;
                     position: relative;
                     text-align: center;
-                    top: 50%;
+                    top: 20%;
                 }
                 h6 {
                     font-family: serif;
